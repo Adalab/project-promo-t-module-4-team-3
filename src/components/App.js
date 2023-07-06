@@ -73,17 +73,19 @@ function App() {
           <Route
             path='/createcard'
             element={
-              <>
                 <Preview data={data} />
+            }
+          />
+          <Route
+            path='/createcard'
+            element={
                 <Form
                   data={data}
                   handleChangeForm={handleChangeForm}
                   handleReset={handleInputReset}
                   handleSubmit={handleSubmit}
-                  url={url}
-                />
-              </>
-            }
+                  url={url}/>
+           }
           />
         </Routes>
       </main>
