@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 19px;
+  &__logo {
+    width: 123px;
+    height: 46px;
+    @media (min-width: 768px) {
+      width: 115px;
+      height: 43px;
+    }
+  }
+}
