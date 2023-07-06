@@ -1,0 +1,14 @@
+.container {
+  // background-color: #302c42;
+    background: linear-gradient(180deg, #492694, #03010c);
+  height: 100%;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}

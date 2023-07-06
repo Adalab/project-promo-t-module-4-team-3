@@ -1,0 +1,44 @@
+@import '../styles/core/variables.scss';
+
+.get-avatar {
+  display: flex;
+  margin: 30px 0;
+}
+
+.get-avatar__label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 38px;
+  color: $white;
+  font-family: $montserrat;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  height: 32px;
+  background-image: linear-gradient(to right, $dark-lilac -2%, #c0b7e8 98%);
+  border-radius: 40px;
+padding: 0 5px;
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    height: 42px;
+    padding:0 15px;
+  }
+}
+
+.get-avatar__upload-field {
+  display: none;
+}
+
+.get-avatar__preview {
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid #ccc;
+  height: 50px;
+  margin-left: 15px;
+  width: 50px;
+}
