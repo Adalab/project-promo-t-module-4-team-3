@@ -71,21 +71,19 @@ function App() {
       <main className='main'>
         <Routes>
           <Route
-            path='/createcard'
+            path='/'
             element={
+              <>
                 <Preview data={data} />
-            }
-          />
-          <Route
-            path='/createcard'
-            element={
                 <Form
                   data={data}
                   handleChangeForm={handleChangeForm}
                   handleReset={handleInputReset}
                   handleSubmit={handleSubmit}
-                  url={url}/>
-           }
+                  url={url}
+                />
+              </>
+            }
           />
         </Routes>
       </main>
