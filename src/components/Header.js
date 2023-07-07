@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Header({ imgLogo, imgNasa }) {
   return (
     <header className='header'>
@@ -11,10 +13,12 @@ function Header({ imgLogo, imgNasa }) {
       <div className='header__container2'>
         <h1 className='header__title'>🧑‍🚀CosmoCoders🚀</h1>
         <p className='header__text2'>
-          Red de reclutamiento para futuros programadores proyecto:
-          Destructuring.
+          Red de reclutamiento para futuros programadores proyecto: Destructuring.
         </p>
-        <button className='header__button'>VER PROYECTOS</button>
+        <Link to='/Repositorio'>
+          {' '}
+          <button className='header__button'>VER PROYECTOS</button>
+        </Link>
       </div>
     </header>
   );

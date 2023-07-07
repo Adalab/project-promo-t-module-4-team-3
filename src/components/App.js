@@ -9,6 +9,7 @@ import Form from './Form';
 import Footer from './Footer';
 import logo_nasa from '../images/logo_nasa.jpg';
 import lStorage from '../services/localstorage';
+import Repository from './Repository';
 
 function App() {
   const [data, setData] = useState(
@@ -71,7 +72,7 @@ function App() {
       <main className='main'>
         <Routes>
           <Route
-            path='/'
+            path='/Inicio'
             element={
               <>
                 <Preview data={data} />
@@ -83,6 +84,14 @@ function App() {
                   handleSubmit={handleSubmit}
                   url={url}
                 />
+              </>
+            }
+          />
+          <Route
+            path='/Repositorio'
+            element={
+              <>
+                <Repository />
               </>
             }
           />
