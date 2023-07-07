@@ -13,7 +13,7 @@ Tools: ⚒️
 
 ☑ ZEPLIN
 ☑ VISUAL STUDIO CODE (VSC)
-☑ HTML pushpin
+☑ HTML 
 ☑ CSS
 ☑ SASS / SCSS
 ☑ REACT
