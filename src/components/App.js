@@ -78,6 +78,7 @@ function App() {
                 <Form
                   data={data}
                   handleChangeForm={handleChangeForm}
+                  handleInputForm={handleInputForm}
                   handleReset={handleInputReset}
                   handleSubmit={handleSubmit}
                   url={url}
