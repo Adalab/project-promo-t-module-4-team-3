@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import '../styles/main.scss';
 import imgLogo from '../images/logo-adalab.png';
 import callToApi from '../services/api';
@@ -9,6 +9,7 @@ import Form from './Form';
 import Footer from './Footer';
 import logo_nasa from '../images/logo_nasa.jpg';
 import lStorage from '../services/localstorage';
+import Landing from '../components/Landing';
 
 function App() {
   const [data, setData] = useState(
@@ -65,13 +66,18 @@ function App() {
     });
     setUrl('');
   };
+
+  const { pathname } = useLocation();
+  if (pathname === '/') {
+    return <Landing></Landing>;
+  }
   return (
     <div className='container'>
       <Header imgLogo={imgLogo} imgNasa={logo_nasa} />
       <main className='main'>
         <Routes>
           <Route
-            path='/'
+            path='/preview'
             element={
               <>
                 <Preview data={data} />
