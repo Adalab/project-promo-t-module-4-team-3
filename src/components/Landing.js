@@ -1,3 +1,4 @@
+import '../styles/components/landing.scss';
 function Landing() {
   <>
     <div divLan>

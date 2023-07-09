@@ -68,18 +68,20 @@ function App() {
   };
 
   const { pathname } = useLocation();
+
   if (pathname === '/') {
-    return <Landing></Landing>;
+    return <Landing />;
   }
+
   return (
     <div className='container'>
-      <Header imgLogo={imgLogo} imgNasa={logo_nasa} />
       <main className='main'>
         <Routes>
           <Route
             path='/preview'
             element={
               <>
+                <Header imgLogo={imgLogo} imgNasa={logo_nasa} />
                 <Preview data={data} />
                 <Form
                   data={data}
@@ -89,12 +91,12 @@ function App() {
                   handleSubmit={handleSubmit}
                   url={url}
                 />
+                <Footer imgLogo={imgLogo} />
               </>
             }
           />
         </Routes>
       </main>
-      <Footer imgLogo={imgLogo} />
     </div>
   );
 }
