@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import '../styles/main.scss';
 import imgLogo from '../images/logo-adalab.png';
 import callToApi from '../services/api';
@@ -67,16 +67,11 @@ function App() {
     setUrl('');
   };
 
-  const { pathname } = useLocation();
-
-  if (pathname === '/') {
-    return <Landing />;
-  }
-
   return (
     <div className='container'>
       <main className='main'>
         <Routes>
+          <Route path='/' element={<Landing />} />
           <Route
             path='/preview'
             element={
