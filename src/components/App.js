@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
+// import { useLocation, matchPath } from "react-router";
 import '../styles/main.scss';
 import imgLogo from '../images/logo-adalab.png';
 import callToApi from '../services/api';
@@ -9,6 +10,7 @@ import Form from './Form';
 import Footer from './Footer';
 import logo_nasa from '../images/logo_nasa.jpg';
 import lStorage from '../services/localstorage';
+// import Detail from './Detail';
 
 function App() {
   const [data, setData] = useState(
@@ -65,6 +67,11 @@ function App() {
     });
     setUrl('');
   };
+
+// OBTENER DATOS DE DETALLE DE PROYECTO
+// const {pathname} = useLocation();
+// const routeData = matchPath("/detail")
+
   return (
     <div className='container'>
       <Header imgLogo={imgLogo} imgNasa={logo_nasa} />
@@ -86,6 +93,9 @@ function App() {
               </>
             }
           />
+          {/* <Route path='/detail'
+          element={<Detail/>}>
+          </Route> */}
         </Routes>
       </main>
       <Footer imgLogo={imgLogo} />
