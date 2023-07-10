@@ -1,7 +1,42 @@
-/*
-//---- reset ---- 
+/*body {
+  min-height: 100vh;
+  background-color: #0c192c;
+}
+.divStars {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.bubles {
+  position: relative;
+  display: flex;
+}
+.bubles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #4fc3dc;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(125s / var(--1));
+}
 
-body {
+.bubles span:nth-child(even) {
+  background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+*/
+/*body {
   margin: 0;
   background-color: #17182f;
 }
@@ -11,170 +46,172 @@ canvas {
   vertical-align: bottom;
 }
 
-
-// ---- particles.js container ---- 
-
 #particles-js {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 */
-
-/*
-codigo js
-
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 355,
-      "density": {
-        "enable": true,
-        "value_area": 789.1476416322727
-      }
-    },
-    "color": {
-      "value": "#ffffff"
-    },
-    "shape": {
-      "type": "circle",
-      "stroke": {
-        "width": 0,
-        "color": "#000000"
-      },
-      "polygon": {
-        "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
-      }
-    },
-    "opacity": {
-      "value": 0.48927153781200905,
-      "random": false,
-      "anim": {
-        "enable": true,
-        "speed": 0.2,
-        "opacity_min": 0,
-        "sync": false
-      }
-    },
-    "size": {
-      "value": 2,
-      "random": true,
-      "anim": {
-        "enable": true,
-        "speed": 2,
-        "size_min": 0,
-        "sync": false
-      }
-    },
-    "line_linked": {
-      "enable": false,
-      "distance": 150,
-      "color": "#ffffff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 0.2,
-      "direction": "none",
-      "random": true,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
-    }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "bubble"
-      },
-      "onclick": {
-        "enable": true,
-        "mode": "push"
-      },
-      "resize": true
-    },
-    "modes": {
-      "grab": {
-        "distance": 400,
-        "line_linked": {
-          "opacity": 1
-        }
-      },
-      "bubble": {
-        "distance": 83.91608391608392,
-        "size": 1,
-        "duration": 3,
-        "opacity": 1,
-        "speed": 3
-      },
-      "repulse": {
-        "distance": 200,
-        "duration": 0.4
-      },
-      "push": {
-        "particles_nb": 4
-      },
-      "remove": {
-        "particles_nb": 2
-      }
-    }
-  },
-  "retina_detect": true
-});
-*/
-
-/*
-
-
-otra ocpion solocss 
-
-
-
-@-webkit-keyframes animStar {
-  from {
-    -webkit-transform: translateY(0px);
-    opacity: .3;
-  }
-  to {
-    -webkit-transform: translateY(1000px);
-    opacity: 1;
-  }
-}
-
-.star {
-  position: absolute;
-  background: #FFF;
-  width: 1px;
-  height: 1px;
-  -webkit-animation-name: animStar;
-  -webkit-animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+//
+#particles-js {
+  height: 100vh;
   width: 100%;
-  background: #000;
+  position: fixed;
+  z-index: -1;
 }
-
-#container {
+.headerLanding {
+  background-color: azure;
   position: relative;
-  height: 100%;
-  width: 100%;
+  z-index: 99;
+  opacity: 0.85;
+}
+.iconInfo {
+  width: 30px;
+  height: 30px;
+}
+.iconTeam {
+  width: 30px;
+  height: 30px;
+}
+.mainLanding {
+  min-height: 80vh;
+}
+.btnStart {
+  background-color: rgba(100, 148, 237, 0);
+}
+.btnStart__link {
+  text-decoration: none;
+}
+//
+/*
+button:active {
+  scale: 1;
+}
+svg {
+  overflow: visible !important;
+}
+.sparkle path {
+  color: hsl (0 0% calc(var(--active, 0)) * 70%);
+  transform-box: fill-box;
+  transform-origin: center;
+  fill: currentColor;
+  stroke: currentColor;
+  animation-delay: calc((var(--transition)) * 1.5);
+  animation-duration: 0.6s;
+  transition: color var(--transition);
+}
+
+button:is(:hiver, focus-visible) path {
+  animation-name: bounce;
 }
 */
+/*particlesJS('particles-js', {
+    particles: {
+      number: {
+        value: 355,
+        density: {
+          enable: true,
+          value_area: 789.1476416322727,
+        },
+      },
+      color: {
+        value: '#ffffff',
+      },
+      shape: {
+        type: 'circle',
+        stroke: {
+          width: 0,
+          color: '#000000',
+        },
+        polygon: {
+          nb_sides: 5,
+        },
+        image: {
+          src: 'img/github.svg',
+          width: 100,
+          height: 100,
+        },
+      },
+      opacity: {
+        value: 0.48927153781200905,
+        random: false,
+        anim: {
+          enable: true,
+          speed: 0.2,
+          opacity_min: 0,
+          sync: false,
+        },
+      },
+      size: {
+        value: 2,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 2,
+          size_min: 0,
+          sync: false,
+        },
+      },
+      line_linked: {
+        enable: false,
+        distance: 150,
+        color: '#ffffff',
+        opacity: 0.4,
+        width: 1,
+      },
+      move: {
+        enable: true,
+        speed: 0.2,
+        direction: 'none',
+        random: true,
+        straight: false,
+        out_mode: 'out',
+        bounce: false,
+        attract: {
+          enable: false,
+          rotateX: 600,
+          rotateY: 1200,
+        },
+      },
+    },
+    interactivity: {
+      detect_on: 'canvas',
+      events: {
+        onhover: {
+          enable: true,
+          mode: 'bubble',
+        },
+        onclick: {
+          enable: true,
+          mode: 'push',
+        },
+        resize: true,
+      },
+      modes: {
+        grab: {
+          distance: 400,
+          line_linked: {
+            opacity: 1,
+          },
+        },
+        bubble: {
+          distance: 83.91608391608392,
+          size: 1,
+          duration: 3,
+          opacity: 1,
+          speed: 3,
+        },
+        repulse: {
+          distance: 200,
+          duration: 0.4,
+        },
+        push: {
+          particles_nb: 4,
+        },
+        remove: {
+          particles_nb: 2,
+        },
+      },
+    },
+    retina_detect: true,
+  });*/
