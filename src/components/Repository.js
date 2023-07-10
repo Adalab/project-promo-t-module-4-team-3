@@ -3,26 +3,76 @@ import { Link } from 'react-router-dom';
 import Preview from './Preview';
 import '../styles/components/respositorio.scss';
 
-function Repository({ data }) {
+function Repository() {
+  const dataObject = [
+    {
+      name: 'Adalab',
+      slogan: 'Sigueme y lo verás',
+      technologies: 'Comunicacion',
+      demo: 'teste',
+      repo: 'https://github.com/SuelenGalhardo?tab=repositories',
+      desc: 'Paquita, una de las mejores representantes de actores de España en los 90, se ve buscando nuevas estrellas desesperadamente, después de perder a su mayor cliente.',
+      autor: 'Paquita salas',
+      job: 'MOCATRIZ',
+      image: 'https://idolosolvidados.com/wp-content/uploads/2019/07/paquita-salas-1561634165.jpg',
+      photo:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqORQLuuw8oSdVXctAxDvPI1_1ZQN32BNwHtf1dvqgNVqIYtlff_ZQvlEHvWciaBp8iYE&usqp=CAU',
+    },
+    {
+      name: 'Adalab',
+      slogan: 'Sigueme y lo verás',
+      technologies: 'Comunicacion',
+      demo: 'teste',
+      repo: 'https://github.com/SuelenGalhardo?tab=repositories',
+      desc: 'Paquita, una de las mejores representantes de actores de España en los 90, se ve buscando nuevas estrellas desesperadamente, después de perder a su mayor cliente.',
+      autor: 'Paquita salas',
+      job: 'MOCATRIZ',
+      image: 'https://idolosolvidados.com/wp-content/uploads/2019/07/paquita-salas-1561634165.jpg',
+      photo:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqORQLuuw8oSdVXctAxDvPI1_1ZQN32BNwHtf1dvqgNVqIYtlff_ZQvlEHvWciaBp8iYE&usqp=CAU',
+    },
+    {
+      name: 'Adalab',
+      slogan: 'Sigueme y lo verás',
+      technologies: 'Comunicacion',
+      demo: 'teste',
+      repo: 'https://github.com/SuelenGalhardo?tab=repositories',
+      desc: 'Paquita, una de las mejores representantes de actores de España en los 90, se ve buscando nuevas estrellas desesperadamente, después de perder a su mayor cliente.',
+      autor: 'Paquita salas',
+      job: 'MOCATRIZ',
+      image: 'https://idolosolvidados.com/wp-content/uploads/2019/07/paquita-salas-1561634165.jpg',
+      photo:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqORQLuuw8oSdVXctAxDvPI1_1ZQN32BNwHtf1dvqgNVqIYtlff_ZQvlEHvWciaBp8iYE&usqp=CAU',
+    },
+    {
+      name: 'Adalab',
+      slogan: 'Sigueme y lo verás',
+      technologies: 'Comunicacion',
+      demo: 'teste',
+      repo: 'https://github.com/SuelenGalhardo?tab=repositories',
+      desc: 'Paquita, una de las mejores representantes de actores de España en los 90, se ve buscando nuevas estrellas desesperadamente, después de perder a su mayor cliente.',
+      autor: 'Paquita salas',
+      job: 'MOCATRIZ',
+      image: 'https://idolosolvidados.com/wp-content/uploads/2019/07/paquita-salas-1561634165.jpg',
+      photo:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqORQLuuw8oSdVXctAxDvPI1_1ZQN32BNwHtf1dvqgNVqIYtlff_ZQvlEHvWciaBp8iYE&usqp=CAU',
+    },
+  ];
+
   return (
     <>
       <div className='repository'>
         <h1>CosmoCoders</h1>
-        <br />
-        <br />
-        <p>
-          Proviene del griego κόσμος que significa «orden, dispuesto de manera ordenada» y es la
-          noción antagónica del caos. Hoy en día se usa como sinónimo del término universo. En el
-          área de la cosmología, el término cosmos suele usarse de un modo técnico refiriéndose a un
-          espacio-tiempo continuo en el (postulado) multiverso.
-        </p>
-        <div>
-          <br />
-          <br />
 
-          <p>Lo sentimos, todavía no hay ningún proyecto presentado</p>
-          <br />
-          <br />
+        <div className='repository__preview'>
+          {dataObject.map((object) => {
+            return (
+              <div className='repository__imagen'>
+                <Preview data={object} />;
+              </div>
+            );
+          })}
+
           <Link to='/Inicio'>Volver</Link>
         </div>
       </div>

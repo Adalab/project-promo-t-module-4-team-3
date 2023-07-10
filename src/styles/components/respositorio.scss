@@ -1,5 +1,17 @@
 .repository {
-  color: white;
-  font-size: 20px;
-  font-family: 'Courier New', Courier, monospace;
+  &__preview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+  }
+  &__imagen {
+    width: 300px;
+
+    .preview {
+      margin: 0;
+    }
+  }
 }
