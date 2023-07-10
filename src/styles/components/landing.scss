@@ -135,3 +135,46 @@ particlesJS("particles-js", {
   "retina_detect": true
 });
 */
+
+/*
+
+
+otra ocpion solocss 
+
+
+
+@-webkit-keyframes animStar {
+  from {
+    -webkit-transform: translateY(0px);
+    opacity: .3;
+  }
+  to {
+    -webkit-transform: translateY(1000px);
+    opacity: 1;
+  }
+}
+
+.star {
+  position: absolute;
+  background: #FFF;
+  width: 1px;
+  height: 1px;
+  -webkit-animation-name: animStar;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+}
+
+#container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+*/
