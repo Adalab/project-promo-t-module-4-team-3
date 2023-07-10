@@ -1,135 +1,42 @@
 import '../styles/components/landing.scss';
-import iconInfo from '../images/info2.png';
-import iconTeam from '../images/team2.png';
+//import iconInfo from '../images/info2.png';
+//import iconTeam from '../images/team2.png';
 import { Link } from 'react-router-dom';
-import Particlesbk from 'react-tsparticles';
-function Landing({ particlesJS }) {
-  particlesJS({
-    particles: {
-      number: {
-        value: 160,
-        density: {
-          enable: true,
-          value_area: 800,
-        },
-      },
-      color: {
-        value: '#ffffff',
-      },
-      shape: {
-        type: 'circle',
-        stroke: {
-          width: 0,
-          color: '#000000',
-        },
-        polygon: {
-          nb_sides: 5,
-        },
-        image: {
-          src: 'img/github.svg',
-          width: 100,
-          height: 100,
-        },
-      },
-      opacity: {
-        value: 1,
-        random: true,
-        anim: {
-          enable: true,
-          speed: 1,
-          opacity_min: 0,
-          sync: false,
-        },
-      },
-      size: {
-        value: 3,
-        random: true,
-        anim: {
-          enable: false,
-          speed: 4,
-          size_min: 0.3,
-          sync: false,
-        },
-      },
-      line_linked: {
-        enable: false,
-        distance: 150,
-        color: '#ffffff',
-        opacity: 0.4,
-        width: 1,
-      },
-      move: {
-        enable: true,
-        speed: 1,
-        direction: 'none',
-        random: true,
-        straight: false,
-        out_mode: 'out',
-        bounce: false,
-        attract: {
-          enable: false,
-          rotateX: 600,
-          rotateY: 600,
-        },
-      },
-    },
-    interactivity: {
-      detect_on: 'canvas',
-      events: {
-        onhover: {
-          enable: true,
-          mode: 'bubble',
-        },
-        onclick: {
-          enable: true,
-          mode: 'repulse',
-        },
-        resize: true,
-      },
-      modes: {
-        grab: {
-          distance: 400,
-          line_linked: {
-            opacity: 1,
-          },
-        },
-        bubble: {
-          distance: 250,
-          size: 0,
-          duration: 2,
-          opacity: 0,
-          speed: 3,
-        },
-        repulse: {
-          distance: 400,
-          duration: 0.4,
-        },
-        push: {
-          particles_nb: 4,
-        },
-        remove: {
-          particles_nb: 2,
-        },
-      },
-    },
-    retina_detect: true,
-  });
+function Landing() {
   return (
     <>
-      <div id='particles-js'></div>
-      <div className='headerLanding'>
-        <img className='iconInfo' src={iconInfo} alt='' />
-        <img className='iconTeam' src={iconTeam} alt='' />
+      <div className='divStars'>
+        <div className='bubbles'>
+          <span styles='--i:11;'></span>
+          <span styles='--i:12;'></span>
+          <span styles='--i:24;'></span>
+          <span styles='--i:10;'></span>
+          <span styles='--i:14;'></span>
+          <span styles='--i:23;'></span>
+          <span styles='--i:18;'></span>
+          <span styles='--i:16;'></span>
+          <span styles='--i:19;'></span>
+          <span styles='--i:20;'></span>
+          <span styles='--i:22;'></span>
+          <span styles='--i:25;'></span>
+          <span styles='--i:18;'></span>
+          <span styles='--i:21;'></span>
+          <span styles='--i:15;'></span>
+          <span styles='--i:13;'></span>
+          <span styles='--i:26;'></span>
+          <span styles='--i:17;'></span>
+          <span styles='--i:13;'></span>
+          <span styles='--i:28;'></span>
+        </div>
       </div>
-      <div>
-        <Particlesbk />
-        <button className='btnStart'>
-          <Link to='/form' className='btnStart__link'>
-            Empezar
-          </Link>
-        </button>
-        <script src='http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
-        <div>{particlesJS()}</div>
+      <div className='btnLanding'>
+        <Link to='/preview' className='btnStart'>
+          <span id='span1'></span>
+          <span id='span2'></span>
+          <span id='span3'></span>
+          <span id='span4'></span>
+          Comenzar
+        </Link>
       </div>
     </>
   );

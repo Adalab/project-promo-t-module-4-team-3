@@ -1,32 +1,35 @@
-/*body {
+body {
   min-height: 100vh;
   background-color: #0c192c;
 }
+
 .divStars {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
 }
-.bubles {
+.bubbles {
   position: relative;
   display: flex;
+  //z-index: -1;
 }
-.bubles span {
+.bubbles span {
   position: relative;
   width: 30px;
   height: 30px;
   background: #4fc3dc;
+  margin: 0 4px;
   border-radius: 50%;
   box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
   animation: animate 15s linear infinite;
-  animation-duration: calc(125s / var(--1));
+  //animation-duration: calc(125s / var(--i));
 }
-
-.bubles span:nth-child(even) {
+.bubbles span:nth-child(even) {
   background: #ff2d75;
   box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
 }
+
 @keyframes animate {
   0% {
     transform: translateY(100vh) scale(0);
@@ -35,183 +38,77 @@
     transform: translateY(-10vh) scale(1);
   }
 }
-*/
-/*body {
-  margin: 0;
-  background-color: #17182f;
-}
 
-canvas {
-  display: block;
-  vertical-align: bottom;
-}
-
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-*/
-//
-#particles-js {
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  z-index: -1;
-}
-.headerLanding {
-  background-color: azure;
-  position: relative;
-  z-index: 99;
-  opacity: 0.85;
-}
-.iconInfo {
-  width: 30px;
-  height: 30px;
-}
-.iconTeam {
-  width: 30px;
-  height: 30px;
-}
-.mainLanding {
-  min-height: 80vh;
+> .btnLanding {
+  margin: auto;
 }
 .btnStart {
-  background-color: rgba(100, 148, 237, 0);
-}
-.btnStart__link {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  letter-spacing: 4px;
+  font-size: 18px;
   text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 20px;
 }
-//
-/*
-button:active {
-  scale: 1;
+.btnStart:hover {
+  background: #a945c7;
+  box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+  transition-delay: 1s;
 }
-svg {
-  overflow: visible !important;
+.btnStart span {
+  position: absolute;
+  display: block;
 }
-.sparkle path {
-  color: hsl (0 0% calc(var(--active, 0)) * 70%);
-  transform-box: fill-box;
-  transform-origin: center;
-  fill: currentColor;
-  stroke: currentColor;
-  animation-delay: calc((var(--transition)) * 1.5);
-  animation-duration: 0.6s;
-  transition: color var(--transition);
+#span1 {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent #a945c7);
+}
+.btnstart:hover #span1 {
+  left: 100%;
+  transition: 1s;
 }
 
-button:is(:hiver, focus-visible) path {
-  animation-name: bounce;
+#span3 {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent #a945c7);
 }
-*/
-/*particlesJS('particles-js', {
-    particles: {
-      number: {
-        value: 355,
-        density: {
-          enable: true,
-          value_area: 789.1476416322727,
-        },
-      },
-      color: {
-        value: '#ffffff',
-      },
-      shape: {
-        type: 'circle',
-        stroke: {
-          width: 0,
-          color: '#000000',
-        },
-        polygon: {
-          nb_sides: 5,
-        },
-        image: {
-          src: 'img/github.svg',
-          width: 100,
-          height: 100,
-        },
-      },
-      opacity: {
-        value: 0.48927153781200905,
-        random: false,
-        anim: {
-          enable: true,
-          speed: 0.2,
-          opacity_min: 0,
-          sync: false,
-        },
-      },
-      size: {
-        value: 2,
-        random: true,
-        anim: {
-          enable: true,
-          speed: 2,
-          size_min: 0,
-          sync: false,
-        },
-      },
-      line_linked: {
-        enable: false,
-        distance: 150,
-        color: '#ffffff',
-        opacity: 0.4,
-        width: 1,
-      },
-      move: {
-        enable: true,
-        speed: 0.2,
-        direction: 'none',
-        random: true,
-        straight: false,
-        out_mode: 'out',
-        bounce: false,
-        attract: {
-          enable: false,
-          rotateX: 600,
-          rotateY: 1200,
-        },
-      },
-    },
-    interactivity: {
-      detect_on: 'canvas',
-      events: {
-        onhover: {
-          enable: true,
-          mode: 'bubble',
-        },
-        onclick: {
-          enable: true,
-          mode: 'push',
-        },
-        resize: true,
-      },
-      modes: {
-        grab: {
-          distance: 400,
-          line_linked: {
-            opacity: 1,
-          },
-        },
-        bubble: {
-          distance: 83.91608391608392,
-          size: 1,
-          duration: 3,
-          opacity: 1,
-          speed: 3,
-        },
-        repulse: {
-          distance: 200,
-          duration: 0.4,
-        },
-        push: {
-          particles_nb: 4,
-        },
-        remove: {
-          particles_nb: 2,
-        },
-      },
-    },
-    retina_detect: true,
-  });*/
+.btnstart:hover #span3 {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+#span2 {
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(180deg, transparent #a945c7);
+}
+.btnstart:hover #span2 {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+#span4 {
+  bottom: 100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent #a945c7);
+}
+.btnstart:hover #span4 {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
