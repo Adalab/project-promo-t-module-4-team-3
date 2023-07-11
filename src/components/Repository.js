@@ -62,6 +62,7 @@ function Repository() {
   return (
     <>
       <div className='repository'>
+        <h2 className='repository__title'>Repositorio de Proyectos</h2>
         <div className='repository__preview'>
           {dataObject.map((object) => {
             return (
@@ -70,9 +71,12 @@ function Repository() {
               </div>
             );
           })}
-
-          <Link to='/'>Volver</Link>
         </div>
+      </div>
+      <div className='respsitory__divLink'>
+        <Link to='/' className='repository__link'>
+          Volver
+        </Link>
       </div>
     </>
   );

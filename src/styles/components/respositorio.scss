@@ -1,4 +1,9 @@
 .repository {
+  &__title {
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+  }
   &__preview {
     display: flex;
     flex-direction: row;
@@ -8,10 +13,40 @@
     padding: 2rem;
   }
   &__imagen {
-    width: 300px;
-
     .preview {
       margin: 0;
+    }
+    .slogan {
+      font-size: 12px;
+    }
+    .title {
+      font-size: 16px;
+    }
+    .desc {
+      font-size: 14px;
+    }
+  }
+  //&__divLink {
+  text-align: center;
+  // }
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #8176af;
+    align-items: center;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    width: 90px;
+    height: 17px;
+    font-size: px;
+    font-family: 'Barlow', sans-serif;
+    @media screen and (min-width: 768px) {
+      width: 154px;
+      height: 29px;
+      font-size: 15px;
     }
   }
 }
