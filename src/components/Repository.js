@@ -62,8 +62,6 @@ function Repository() {
   return (
     <>
       <div className='repository'>
-        <h1>CosmoCoders</h1>
-
         <div className='repository__preview'>
           {dataObject.map((object) => {
             return (
