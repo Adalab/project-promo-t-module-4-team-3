@@ -10,21 +10,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 38px;
+  margin-top: 15px;
   color: $white;
-  font-family: $montserrat;
+  font-family: $barlow;
   font-size: 10px;
   font-weight: bold;
   text-align: center;
   border: none;
   height: 32px;
-  background-image: linear-gradient(to right, $dark-lilac -2%, #c0b7e8 98%);
+  background-image: linear-gradient(to right, $dark-lilac -2%, #0d01432e 98%);
   border-radius: 40px;
-padding: 0 5px;
+  padding: 0 5px;
+  &:hover {
+    background-color: #0d909d;
+    border: 1px solid white;
+  }
   @media screen and (min-width: 768px) {
     font-size: 12px;
     height: 42px;
-    padding:0 15px;
+    padding: 0 15px;
   }
 }
 
