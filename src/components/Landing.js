@@ -3,8 +3,9 @@ import { useCallback } from 'react';
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
 import { Link } from 'react-router-dom';
-import iconInfo from '../images/info2.png';
-import iconTeam from '../images/team.png';
+import iconInfo from '../images/acerca-de.png';
+import iconTeam from '../images/grupo.png';
+import imgLogo from '../images/top-secret.png';
 
 const Landing = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -63,7 +64,7 @@ const Landing = () => {
               distance: 150,
               enable: true,
               opacity: 0.5,
-              width: 1,
+              width: 1.5,
             },
             collisions: {
               enable: true,
@@ -83,7 +84,7 @@ const Landing = () => {
                 enable: true,
                 area: 800,
               },
-              value: 86,
+              value: 80,
             },
             opacity: {
               value: 0.5,
@@ -92,24 +93,27 @@ const Landing = () => {
               type: 'circle',
             },
             size: {
-              value: { min: 1, max: 3 },
+              value: { min: 1, max: 4 },
             },
           },
           detectRetina: true,
         }}
       />
-      <div>
+      <div className='divIcon'>
         <img className='iconInfo icon' src={iconInfo} alt='' />
         <img className='iconTeam icon' src={iconTeam} alt='' />
       </div>
-      <div className='btnLanding'>
-        <Link to='/preview' className='btnStart'>
-          <span id='span1'></span>
-          <span id='span2'></span>
-          <span id='span3'></span>
-          <span id='span4'></span>
-          Comenzar
-        </Link>
+      <div className='divLogo'>
+        <img className='imgLogo' src={imgLogo} alt='' />
+        <div className='btnLanding'>
+          <Link to='/preview' className='btnStart'>
+            <span id='span1'></span>
+            <span id='span2'></span>
+            <span id='span3'></span>
+            <span id='span4'></span>
+            <p className='text__button'>Comenzar</p>
+          </Link>
+        </div>
       </div>
     </>
   );

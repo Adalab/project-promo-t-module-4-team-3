@@ -5,22 +5,57 @@
     ), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
 }*/
+.divIcon {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  gap: 20px;
+}
 .icon {
   width: 30px;
   height: 30px;
+  z-index: 1;
+  position: relative;
+  //border: solid 2px violet;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+.icon:hover {
+  filter: saturate(180%);
+  transition: all 0.5s ease-in-out;
+}
+.iconTeam {
+}
+.divLogo {
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.imgLogo {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+.imgLogo:hover {
+  filter: saturate(150%);
+  transition: all 0.5s ease-in-out;
 }
 .btnLanding {
-  margin: auto;
+  padding-top: 40px;
 }
 .btnStart {
   position: relative;
   display: inline-block;
-  padding: 15px 30px;
-  letter-spacing: 4px;
+  padding: 10px 20px;
+  letter-spacing: 3px;
   font-size: 18px;
   text-decoration: none;
   overflow: hidden;
-  transition: 0.2s;
+  transition: 0.5s; //0.2s
   border-radius: 20px;
 }
 .btnStart:hover {
@@ -42,4 +77,44 @@
 .btnstart:hover #span1 {
   left: 100%;
   transition: 1s;
+}
+#span3 {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent #a945c7);
+}
+.btnstart:hover #span3 {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+#span2 {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent #a945c7);
+}
+.btnstart:hover #span2 {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+#span4 {
+  bottom: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent #a945c7);
+}
+.btnstart:hover #span4 {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+.text__button {
+  color: white;
 }
