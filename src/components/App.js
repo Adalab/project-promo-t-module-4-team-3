@@ -74,7 +74,7 @@ function App() {
           <Route
             path='/'
             element={
-              <>
+              <div className='form_container'>
                 <Preview data={data} />
                 <Form
                   data={data}
@@ -84,7 +84,7 @@ function App() {
                   handleSubmit={handleSubmit}
                   url={url}
                 />
-              </>
+              </div>
             }
           />
           <Route

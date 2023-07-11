@@ -11,7 +11,7 @@
 
   &__text {
     padding-left: 5px;
-    font-family: $poppins;
+    font-family: $barlow;
     font-size: 11px;
     font-weight: 300;
     line-height: normal;
@@ -23,9 +23,8 @@
   }
 
   &__title {
-    font-family: $montserrat;
-    font-size: 16px;
-    font-weight: bold;
+    font-family: $barlow;
+    font-size: 18px;
     line-height: normal;
     color: $white;
     @media screen and (min-width: 768px) {
@@ -34,12 +33,13 @@
   }
 
   &__text2 {
-    font-family: $montserrat;
-    font-size: 9px;
+    font-family: $barlow;
+    font-size: 14px;
     font-weight: lighter;
+    font-style: italic;
     padding-bottom: 1px;
-    text-align: center;
-    color: $white;
+    // text-align: center;
+    color: $white-50;
     @media screen and (min-width: 768px) {
       font-size: 18px;
     }
@@ -53,7 +53,7 @@
     width: 90px;
     height: 17px;
     font-size: 8px;
-    font-family: $roboto;
+    font-family: $barlow;
     @media screen and (min-width: 768px) {
       width: 154px;
       height: 29px;
@@ -81,7 +81,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap: 10px;
   }
 }
