@@ -72,7 +72,7 @@ function App() {
       <main className='main'>
         <Routes>
           <Route
-            path='/Inicio'
+            path='/'
             element={
               <>
                 <Preview data={data} />

@@ -73,7 +73,7 @@ function Repository() {
             );
           })}
 
-          <Link to='/Inicio'>Volver</Link>
+          <Link to='/'>Volver</Link>
         </div>
       </div>
     </>
