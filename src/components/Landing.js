@@ -3,6 +3,8 @@ import { useCallback } from 'react';
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
 import { Link } from 'react-router-dom';
+import iconInfo from '../images/info2.png';
+import iconTeam from '../images/team.png';
 
 const Landing = () => {
   const particlesInit = useCallback(async (engine) => {
@@ -96,6 +98,10 @@ const Landing = () => {
           detectRetina: true,
         }}
       />
+      <div>
+        <img className='iconInfo icon' src={iconInfo} alt='' />
+        <img className='iconTeam icon' src={iconTeam} alt='' />
+      </div>
       <div className='btnLanding'>
         <Link to='/preview' className='btnStart'>
           <span id='span1'></span>
