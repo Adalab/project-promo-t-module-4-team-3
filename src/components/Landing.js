@@ -3,16 +3,12 @@ import { useCallback } from 'react';
 import Particles from 'react-particles';
 import { loadFull } from 'tsparticles';
 import { Link } from 'react-router-dom';
-import iconInfo from '../images/acerca-de.png';
-import iconTeam from '../images/grupo.png';
 import imgLogo from '../images/top-secret.png';
+import HeaderLand from './HeaderLand';
 
 const Landing = () => {
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
   }, []);
 
@@ -99,12 +95,9 @@ const Landing = () => {
           detectRetina: true,
         }}
       />
-      <div className='divIcon'>
-        <img className='iconInfo icon' src={iconInfo} alt='' />
-        <img className='iconTeam icon' src={iconTeam} alt='' />
-      </div>
+      <HeaderLand />
       <div className='divLogo'>
-        <img className='imgLogo' src={imgLogo} alt='' />
+        <img className='imgLogo' src={imgLogo} alt='logo' />
         <div className='btnLanding'>
           <Link to='/preview' className='btnStart'>
             <span id='span1'></span>
