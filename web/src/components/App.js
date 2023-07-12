@@ -74,17 +74,23 @@ function App() {
           <Route
             path='/'
             element={
-              <div className='form_container'>
-                <Preview data={data} />
-                <Form
-                  data={data}
-                  handleChangeForm={handleChangeForm}
-                  handleInputForm={handleInputForm}
-                  handleReset={handleInputReset}
-                  handleSubmit={handleSubmit}
-                  url={url}
-                />
-              </div>
+              <>
+                <h2 className='header__text2'>
+                  Formulario de registro candidaturas
+                </h2>
+
+                <div className='form_container'>
+                  <Preview data={data} />
+                  <Form
+                    data={data}
+                    handleChangeForm={handleChangeForm}
+                    handleInputForm={handleInputForm}
+                    handleReset={handleInputReset}
+                    handleSubmit={handleSubmit}
+                    url={url}
+                  />
+                </div>
+              </>
             }
           />
           <Route
