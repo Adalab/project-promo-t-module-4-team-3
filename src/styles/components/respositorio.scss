@@ -26,9 +26,11 @@
       font-size: 14px;
     }
   }
-  //&__divLink {
-  text-align: center;
-  // }
+  &__divLink {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
   &__link {
     display: flex;
     flex-direction: column;
