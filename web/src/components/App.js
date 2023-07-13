@@ -38,19 +38,15 @@ function App() {
   };
 
   const handleSubmit = (ev) => {
-    ev.preventDefault();
-    console.log("manolo")
-    callToApi(data).then((response) => {
-      console.log(response)
-      const res = response;
-      
-      // if (response.success) {
-      //   setUrl(response.cardURL);
-      // } else {
-      //   setUrl('No se pudo crear su card, por favor rellene todos los campos');
-      // }
+    // ev.preventDefault();
 
-      return res;
+    callToApi(data).then((response) => {
+      console.log(response);
+      if (response.cardURL) {
+        setUrl(response.cardURL);
+      } else {
+        setUrl('No se pudo crear su card, por favor rellene todos los campos');
+      }
     });
   };
   useEffect(() => {
