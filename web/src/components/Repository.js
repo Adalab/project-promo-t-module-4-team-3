@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
+import getAllListOfProjects from '../services/api_allprojects'
 
 import Preview from './Preview';
 import '../styles/components/respositorio.scss';
+import { useEffect, useState } from 'react';
 
 function Repository() {
 
@@ -59,13 +61,22 @@ function Repository() {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqORQLuuw8oSdVXctAxDvPI1_1ZQN32BNwHtf1dvqgNVqIYtlff_ZQvlEHvWciaBp8iYE&usqp=CAU',
     },
   ];
+  const [listProjects, setListProjects ] = useState([])
+
+  useEffect(()=>{
+    getAllListOfProjects().then((response)=>{
+      const dataList = response; 
+      setListProjects(dataList);
+      return dataList
+    })
+  },[])
+       console.log('HOLA SOY LIST PROYECTS',listProjects)
 
   return (
     <>
       <div className='repository'>
-        <h2 className='repository__title'>Listado de Proyectos</h2>
         <div className='repository__preview'>
-          {dataObject.map((object) => {
+          {listProjects.map((object) => {
             return (
               <div className='repository__imagen'>
                 <Preview data={object} />;

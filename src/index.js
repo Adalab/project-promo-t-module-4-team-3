@@ -28,7 +28,7 @@ connectDb();
 
 //  Endpoints
 server.get("/api/allprojects", async (req, res) => {
-    const selectAllProjects = "SELECT * FROM projects";
+    const selectAllProjects = "SELECT * FROM projects INNER JOIN author ON projects.fk_idauthor= author.idauthor";
     const connect = await connectDb();
     const [result] = await connect.query(selectAllProjects);
     res.json(result);

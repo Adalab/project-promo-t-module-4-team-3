@@ -17,12 +17,13 @@ function Form({
 
   return (
     <>
+
       <section className='form'>
         <div className='form_autor'>
           <section>
             <p className='form__subtitle'>Sobre la autora</p>
             <hr className='form__line form__lineNone' />
-      {/* <h2 className='form__title'>Información</h2> */}
+            {/* <h2 className='form__title'>Información</h2> */}
           </section>
           <fieldset className='autor_form'>
             <input

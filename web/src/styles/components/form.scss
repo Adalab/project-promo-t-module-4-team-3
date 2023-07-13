@@ -85,7 +85,7 @@
   // flex-direction: column;
   gap: 20px;
   margin-left: 35px;
-  width: 80%;
+margin-right: 35px;
   //   border: none;
 }
 
@@ -141,7 +141,7 @@
   justify-content: center;
   // gap: 10px;
 
-  cursor: pointer;
+
   &__btn {
     margin-top: 38px;
     color: $white;
@@ -154,7 +154,10 @@
     background-image: linear-gradient(to right, $dark-lilac -2%, #696969 98%);
     border-radius: 15px;
     padding: 0 18px;
-
+  cursor: pointer;
+  &:hover{
+    background-image: linear-gradient(to right, #42211f -70%, #d3756e4c 98%);
+  }
     @media screen and (min-width: 768px) {
       font-size: 12px;
       height: 42px;
