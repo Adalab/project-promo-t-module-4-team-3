@@ -70,7 +70,6 @@ function Repository() {
       return dataList
     })
   },[])
-       console.log('HOLA SOY LIST PROYECTS',listProjects)
 
   return (
     <>

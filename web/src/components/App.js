@@ -39,15 +39,18 @@ function App() {
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-
+    console.log("manolo")
     callToApi(data).then((response) => {
-      // console.log(data)
-      console.log("holiss",response)
-      if (response.success) {
-        setUrl(response.cardURL);
-      } else {
-        setUrl('No se pudo crear su card, por favor rellene todos los campos');
-      }
+      console.log(response)
+      const res = response;
+      
+      // if (response.success) {
+      //   setUrl(response.cardURL);
+      // } else {
+      //   setUrl('No se pudo crear su card, por favor rellene todos los campos');
+      // }
+
+      return res;
     });
   };
   useEffect(() => {
