@@ -38,12 +38,11 @@ function App() {
   };
 
   const handleSubmit = (ev) => {
-    ev.preventDefault();
+    // ev.preventDefault();
 
     callToApi(data).then((response) => {
-      // console.log(data)
-      console.log("holiss",response)
-      if (response.success) {
+      console.log(response);
+      if (response.cardURL) {
         setUrl(response.cardURL);
       } else {
         setUrl('No se pudo crear su card, por favor rellene todos los campos');

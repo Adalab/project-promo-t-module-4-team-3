@@ -46,10 +46,18 @@ server.post('/api/projects/add', async(req, res) => {
 
     const idAuthor = resultAuthor.insertId;
     let insertProject = "INSERT INTO projects (name, slogan, technologies, demo, repo, description, image, fk_idauthor) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-    const [resultProject] = await connect.query(insertProject, [body.name, body.slogan, body.technologies, body.demo, body.repo, body.description, body.image, body.fk_idauthor])
+    const [resultProject] = await connect.query(insertProject, [
+      body.name,
+      body.slogan,
+      body.technologies,
+      body.demo,
+      body.repo,
+      body.desc,
+      body.image,
+      idAuthor,
+    ]);
+    console.log('resultproyect',resultProject)
 
-
-    // res.json({mensaje: "holaa"});
     res.json({cardURL: `http://localhost:4000/project/${resultProject.insertId}`})
 })
 

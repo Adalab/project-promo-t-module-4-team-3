@@ -70,16 +70,16 @@ function Repository() {
       return dataList
     })
   },[])
-       console.log('HOLA SOY LIST PROYECTS',listProjects)
+
 
   return (
     <>
       <div className='repository'>
         <div className='repository__preview'>
-          {listProjects.map((object) => {
+          {listProjects.map((project) => {
             return (
-              <div className='repository__imagen'>
-                <Preview data={object} />;
+              <div key={project.idprojects} className='repository__imagen'>
+                <Preview data={project} />;
               </div>
             );
           })}
