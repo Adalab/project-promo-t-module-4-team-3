@@ -1,15 +1,27 @@
 .footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding-bottom: 19px;
-  &__logo {
-    width: 123px;
-    height: 46px;
-    @media (min-width: 768px) {
-      width: 115px;
-      height: 43px;
-    }
-  }
 
+  
+  &__logo {
+  width: 115px;
+  height: 38px;
+
+    @media (min-width: 768px) {
+    height: 43px;
+    }}
+
+ &__copy {
+  color: #d8d8d8;
+  font-size: 14px;
+  width: 210px;
+  height: 20px;
+}
+  
+  @media (min-width: 768px) {
+   
+  }
+  
 }
