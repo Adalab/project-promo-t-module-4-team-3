@@ -97,6 +97,9 @@ function App() {
             path='/Repositorio'
             element={
               <>
+                <h2 className='header__text2'>
+                  Listado de proyectos
+                </h2>
                 <Repository />
               </>
             }
