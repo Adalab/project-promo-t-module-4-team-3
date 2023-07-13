@@ -1,5 +1,17 @@
+// const callToApi = (data) => {
+//   return fetch('https://dev.adalab.es/api/projectCard', {
+//     method: 'POST',
+//     body: JSON.stringify(data),
+//     headers: { 'content-type': 'application/json' },
+//   })
+//     .then((response) => response.json())
+//     .then((result) => {
+//       return result;
+//     });
+// };
+
 const callToApi = (data) => {
-  return fetch('https://dev.adalab.es/api/projectCard', {
+  fetch('http://localhost:4000/api/projects/add', {
     method: 'POST',
     body: JSON.stringify(data),
     headers: { 'content-type': 'application/json' },
@@ -11,9 +23,9 @@ const callToApi = (data) => {
 };
 
 async function getAllListOfProjects() {
-  const fetch = await fetch("http://localhost:4000/api/allprojects");
-  const dataJson = await fetch.json();
+  const fetchProjects = await fetch('http://localhost:4000/api/allprojects');
+  const dataJson = await fetchProjects.json();
   return(dataJson);
 }
 
-export default {callToApi , getAllListOfProjects} ;
+export default (callToApi , getAllListOfProjects) ;

@@ -40,6 +40,8 @@ function App() {
     ev.preventDefault();
 
     callToApi(data).then((response) => {
+      // console.log(data)
+      console.log("holiss",response)
       if (response.success) {
         setUrl(response.cardURL);
       } else {
