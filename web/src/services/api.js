@@ -13,8 +13,9 @@
 const callToApi = (data) => {
   return fetch('http://localhost:4000/api/projects/add', {
     method: 'POST',
-    body: JSON.stringify(data),
     headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(data),
+    
   })
     .then((response) => response.json())
     .then((result) => {
