@@ -6,7 +6,7 @@ function Header({ imgLogo, imgNasa }) {
       <div className='header__container'>
         <div className='header__icon'>
           <img className='header__logo--nasa' src={imgNasa} alt='nasa' />
-          <p className='header__text'>Top secret NASA</p>
+          {/* <p className='header__text'>Top secret NASA</p> */}
         </div>
         {/* //<img className='header__logo' src={imgLogo} alt='' /> */}
       </div>

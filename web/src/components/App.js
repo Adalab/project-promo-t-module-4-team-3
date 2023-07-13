@@ -7,7 +7,7 @@ import Header from './Header';
 import Preview from './Preview';
 import Form from './Form';
 import Footer from './Footer';
-import logo_nasa from '../images/logo_nasa.jpg';
+import logo_nasa from '../images/logo-nasa.png';
 import lStorage from '../services/localstorage';
 import Repository from './Repository';
 
