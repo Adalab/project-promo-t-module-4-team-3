@@ -62,7 +62,6 @@ function Repository() {
   return (
     <>
       <div className='repository'>
-        <h2 className='repository__title'>Listado de Proyectos</h2>
         <div className='repository__preview'>
           {dataObject.map((object) => {
             return (
