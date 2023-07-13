@@ -10,10 +10,5 @@ const callToApi = (data) => {
     });
 };
 
-async function getAllListOfProjects() {
-  const fetch = await fetch("http://localhost:4000/api/allprojects");
-  const dataJson = await fetch.json();
-  return(dataJson);
-}
 
-export default {callToApi , getAllListOfProjects} ;
+export default callToApi;
