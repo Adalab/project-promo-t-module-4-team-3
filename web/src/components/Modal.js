@@ -17,8 +17,14 @@ import Close from '../images/times-solid-svgrepo-com.svg';
                  ? 'La tarjeta ha sido creada '
                  : 'No se pudo crear su card, por favor rellene todos los campos'}
                <div className='buttons_container'>
-                 <button className='card_button'>Ver tarjeta creada</button>
-                 <button className='project_button'>Ver listado de proyectos</button>
+                 <button className='card_button'>
+                   <a className='card_button_url' href={url}>
+                     Ver tarjeta creada
+                   </a>
+                 </button>
+                 <button className='project_button'>
+                   Ver listado de proyectos
+                 </button>
                </div>
              </main>
              {/* <footer className='modal_footer'>

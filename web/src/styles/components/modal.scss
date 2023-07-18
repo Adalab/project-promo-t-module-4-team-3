@@ -23,6 +23,7 @@
 
     &_header {
       position: relative;
+      // border-bottom: 1px solid #dddddd;
       font-family: 'Barlow', sans-serif;
       &-title {
         text-align: center;
@@ -63,6 +64,10 @@
         font-family: 'Barlow', sans-serif;
         background-color: antiquewhite;
         box-shadow: 0 0 1rem 0 rgba(51, 45, 81, 0.776);
+        &_url {
+          text-decoration: none;
+          color:black;
+        }
         &:hover {
           background: linear-gradient(180deg, #708bd76a, #7b2d1199);
           color: rgba(190, 205, 234, 0.876);
@@ -88,6 +93,7 @@
         border: none;
         background-color: antiquewhite;
         box-shadow: 0 0 1rem 0 rgba(51, 45, 81, 0.776);
+        
         &:hover {
           background: linear-gradient(180deg, #708bd76a, #7b2d1199);
           color: rgba(190, 205, 234, 0.876);
@@ -106,6 +112,7 @@
           }
         }
       }
+           
     }
     &_content {
       // border-bottom: 1px solid #dddddd;
