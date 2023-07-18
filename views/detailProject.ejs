@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/components/detailProject.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500;700&family=Montserrat:wght@300;400;700&family=Poppins:wght@300;400;500&family=Roboto+Slab&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+   <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;1,200;1,300;1,400&family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;1,200;1,300;1,400&family=Chakra+Petch&family=Dosis&family=Rajdhani&family=Titillium+Web&family=Yrsa&display=swap" rel="stylesheet">
+   <link rel="styles" href="./components/detailProject">
+
+   <script
+      src="https://kit.fontawesome.com/1aa62fa5ff.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>TOP SECRET NASA</title>
+  </head>
+<body>
+    <header className='header'>
+        <div className='header__container'>
+          <div className='header__icon'>
+            <Link to='/'>
+              <img className='header__logo--nasa' src={imgNasa} alt='nasa' />
+            </Link>
+          </div>
+          <div className='header__container2'>
+            <h1 className='header__title'>CosmoCoders</h1>
+          </div>
+          <Link to='/Repositorio'>
+            {' '}
+            <button className='header__button'>VER PROYECTOS</button>
+          </Link>
+        </div>
+      </header>
+    <main>
+        <h1 class="h1"><%= name %></h1>
+        <p><%= slogan %></p>
+        <p><%= description %></p>
+        <p><%= technologies %></p>
+        <img src="<%= photo %>" alt="">
+        <a href="<%= repo %>"></a>
+        <a href="<%= demo %>"></a>
+        <img src="<%= image %> " alt="">
+        <p><%= autor %></p>
+        <p><%= job %></p>
+    </main>
+</body>
+</html>
