@@ -43,7 +43,13 @@ function App() {
 
   const handleSubmit = (ev) => {
     // ev.preventDefault();
-    if()
+    for (const field in data) {
+      if(data[field] === '') {
+       setUrl('No se pudo crear su card, por favor rellene todos los campos');
+        return 
+      }    
+
+    }
     callToApi(data).then((response) => {
       console.log(response);
       if (response.cardURL) {
