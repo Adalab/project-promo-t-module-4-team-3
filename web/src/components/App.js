@@ -10,6 +10,8 @@ import Footer from './Footer';
 import logo_nasa from '../images/logo-nasa.png';
 import lStorage from '../services/localstorage';
 import Repository from './Repository';
+import Modal from './Modal';
+
 
 
 function App() {
@@ -27,8 +29,10 @@ function App() {
       photo: '',
     })
   );
-
+  const[modal, setModal] = useState( false );
+  const Toggle = () => setModal(!modal);
   const [url, setUrl] = useState('');
+
 
   const handleChangeForm = (input, value) => {
     setData({ ...data, [input]: value });
@@ -39,7 +43,7 @@ function App() {
 
   const handleSubmit = (ev) => {
     // ev.preventDefault();
-
+    if()
     callToApi(data).then((response) => {
       console.log(response);
       if (response.cardURL) {
@@ -48,6 +52,7 @@ function App() {
         setUrl('No se pudo crear su card, por favor rellene todos los campos');
       }
     });
+    setModal(!modal);
   };
   useEffect(() => {
     lStorage.set('lsData', data);
@@ -67,6 +72,7 @@ function App() {
       photo: '',
     });
     setUrl('');
+    
   };
   return (
     <div className='container'>
@@ -91,6 +97,12 @@ function App() {
                     handleSubmit={handleSubmit}
                     url={url}
                   />
+                  <Modal
+                    show={modal}
+                    url={url}
+                    title='My Modal'
+                    close={Toggle}
+                  />
                 </div>
               </>
             }
@@ -99,9 +111,7 @@ function App() {
             path='/Repositorio'
             element={
               <>
-                <h2 className='header__text2'>
-                  Listado de proyectos
-                </h2>
+                <h2 className='header__text2'>Listado de proyectos</h2>
                 <Repository />
               </>
             }
