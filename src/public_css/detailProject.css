@@ -1,83 +1,33 @@
+.div {
+  background-image: url("../../web/src/images/foto2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 30px;
 }
-.header__icon {
-  display: flex;
-  align-items: end;
-}
-.header__text {
-  padding-left: 5px;
-  font-family: "Barlow", sans-serif;
-  font-size: 11px;
-  font-weight: 300;
-  line-height: normal;
-  color: rgba(255, 255, 255, 0.5);
-  display: inline-block;
-}
-@media screen and (min-width: 768px) {
-  .header__text {
-    font-size: 14px;
-  }
-}
-.header__title {
-  font-family: "Chakra Petch";
-  font-size: 20px;
-  line-height: normal;
-  color: #fff;
-}
-@media screen and (min-width: 768px) {
-  .header__title {
-    font-size: 50px;
-  }
-}
-.header__text2 {
-  font-family: "Barlow", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  font-style: italic;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.6);
-}
-@media screen and (min-width: 768px) {
-  .header__text2 {
-    font-size: 18px;
-  }
-}
-.header__button {
-  background-color: #8176af;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  width: 90px;
-  height: 17px;
-  font-size: 8px;
-  font-family: "Barlow", sans-serif;
-  cursor: pointer;
-}
-@media screen and (min-width: 768px) {
-  .header__button {
-    width: 154px;
-    height: 29px;
-    font-size: 15px;
-  }
-}
-.header__container {
+
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header__logo {
-  height: 35px;
-  width: 200px;
+
+.icon {
+  display: flex;
+  align-items: center;
 }
-.header__logo--nasa {
+
+.nasa {
   width: 150px;
   border-radius: 50%;
 }
-.header__container2 {
+
+.container2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,11 +35,249 @@
   gap: 10px;
 }
 
-.fa-sharp {
-  font-size: 23px;
-  color: #fff;
+.title1 {
+  font-family: "Chakra Petch";
+  color: blue;
+  font-size: 20px;
+  line-height: normal;
+}
+@media screen and (min-width: 768px) {
+  .title1 {
+    font-size: 50px;
+  }
+}
+
+.preview {
+  margin: 17px 17px;
+  padding: 0.5px 1.2px 2.9px 0;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .preview {
+    padding-top: 21px;
+  }
+}
+
+.preview .image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.preview .autor {
+  background: linear-gradient(180deg, rgb(119, 126, 158) 20%, rgb(27, 35, 52) 120%);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.372);
+  transform: translateY(-30px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 15px 5px 25px 5px;
+}
+.autor {
+  width: 90%;
+  margin: auto;
+  max-width: 400px;
+  min-width: 250px;
+}
+@media screen and (min-width: 768px) {
+  .autor {
+    max-width: 400px;
+    min-width: 400px;
+  }
+}
+
+.info-project {
+  width: 90%;
+}
+
+.info-project .subtitleCard {
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+}
+
+.subtitleCard {
+  color: #302c42;
+  font-size: 10px;
+  padding-top: 5px;
+}
+@media screen and (min-width: 768px) {
+  .subtitleCard {
+    font-size: 10px;
+  }
+}
+
+.containerLine {
+  display: flex;
+  padding-bottom: 15px;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.line {
+  width: 25px;
+  margin: 0;
+  height: 1px;
+  background-image: linear-gradient(to left, rgba(1, 1, 1, 0.75), rgba(255, 255, 255, 0));
+}
+
+.line2 {
+  width: 25px;
+  margin: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(1, 1, 1, 0.75), rgba(255, 255, 255, 0));
 }
 
 .title {
-  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Barlow", sans-serif;
+  color: rgb(202, 202, 202);
+}
+.slogan {
+  color: rgb(186, 185, 185);
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-size: 10.3px;
+  padding-bottom: 10px;
+}
+.desc {
+  font-size: 8px;
+  font-family: "Barlow", sans-serif;
+  line-height: 1.5;
+  color: rgb(186, 185, 185);
+  width: 80%;
+}
+.technologies {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  padding-top: 18px;
+  font-family: "Barlow", sans-serif;
+  align-items: center;
+}
+.textTec {
+  color: rgb(174, 167, 167);
+}
+.icons {
+  padding-right: 12px;
+}
+.globe {
+  margin-right: 5.3px;
+  padding: 0 3px 0 3px;
+  border-radius: 15px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  border: solid 2px #bcd1d8;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.github {
+  padding: 0 3px 0 3px;
+  border-radius: 15px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  border: solid 2px #bcd1d8;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.info-autor {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.imageCard {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  padding-bottom: 3px;
+}
+@media screen and (min-width: 768px) {
+  .imageCard {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+  }
+}
+
+.job {
+  color: rgb(202, 191, 191);
+  font-size: 10px;
+  font-family: "Barlow", sans-serif;
+  padding-bottom: 2px;
+}
+@media screen and (min-width: 768px) {
+  .job {
+    font-size: 11px;
+  }
+}
+
+.name {
+  font-size: 15px;
+  font-family: "Barlow", sans-serif;
+  font-weight: bold;
+  color: rgb(233, 221, 221);
+}
+@media screen and (min-width: 768px) {
+  .name {
+    font-size: 13.3px;
+  }
+}
+
+.info-autor__desc {
+  padding-left: 15px;
+}
+@media screen and (min-width: 768px) {
+  .info-autor__desc {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 19px;
+}
+
+.logo {
+  width: 115px;
+  height: 38px;
+}
+@media (min-width: 768px) {
+  .logo {
+    height: 43px;
+  }
+}
+
+.copy {
+  color: blue;
+  font-size: 14px;
+  width: 210px;
+  height: 20px;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #8176af;
+  align-items: center;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  width: 90px;
+  height: 17px;
+  font-size: px;
+  font-family: "Barlow", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .link {
+    width: 154px;
+    height: 29px;
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=detailProject.css.map */
