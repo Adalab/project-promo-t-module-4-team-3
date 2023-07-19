@@ -1,23 +1,48 @@
+import React, { useState } from 'react';
 import '../styles/components/headerLand.scss';
 import iconInfo from '../images/acerca-de.png';
 import iconTeam from '../images/grupo.png';
+
 function HeaderLand() {
+  const [showInfo, setShowInfo] = useState(false);
+  const [showTeam, setShowTeam] = useState(false);
+
+  const handleInfoClick = () => {
+    setShowInfo(!showInfo);
+    setShowTeam(false);
+  };
+
+  const handleTeamClick = () => {
+    setShowTeam(!showTeam);
+    setShowInfo(false);
+  };
+
   return (
     <>
       <div className='headerLand'>
         <div className='divIcon'>
-          <img className='iconInfo icon' src={iconInfo} alt='info' />
-          <img className='iconTeam icon' src={iconTeam} alt='team' />
+          <img
+            className={`icon iconInfo ${showInfo ? 'active' : ''}`}
+            src={iconInfo}
+            alt='info'
+            onClick={handleInfoClick}
+          />
+          <img
+            className={`icon iconTeam ${showTeam ? 'active' : ''}`}
+            src={iconTeam}
+            alt='team'
+            onClick={handleTeamClick}
+          />
         </div>
         <div className='divTextLand'>
-          <p className='textInfo'>
+          <p className={`textInfo ${showInfo ? 'active' : ''}`}>
             "En esta aplicación encontrarás una página donde se muestran
             proyectos alucinantes sobre diferentes temas. Si deseas dejar huella
             puedes subir tu propio proyecto clicando en (nombre del boton) que
             te dará paso a un formulario donde podrás rellenar tus datos y
             embarcarte en este viaje de distribución del saber"
           </p>
-          <p className='textTeam'>
+          <p className={`textTeam ${showTeam ? 'active' : ''}`}>
             "Somos un grupo de 5 mujeres programadoras fullstack dedicadas al
             desarrollo web.Creamos entornos de comunicacion para futuros
             programadores a través de nuestra plataforma donde comparten sus
@@ -31,4 +56,5 @@ function HeaderLand() {
     </>
   );
 }
+
 export default HeaderLand;
