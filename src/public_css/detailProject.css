@@ -1,5 +1,5 @@
 .div {
-  background-image: url("../../web/src/images/foto2.jpg");
+  background-image: url("foto2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -37,9 +37,9 @@
 
 .title1 {
   font-family: "Chakra Petch";
-  color: blue;
   font-size: 20px;
   line-height: normal;
+  color: #fff;
 }
 @media screen and (min-width: 768px) {
   .title1 {
@@ -253,31 +253,8 @@
 }
 
 .copy {
-  color: blue;
+  color: #fff;
   font-size: 14px;
   width: 210px;
   height: 20px;
-}
-
-.link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-decoration: none;
-  background-color: #8176af;
-  align-items: center;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  width: 90px;
-  height: 17px;
-  font-size: px;
-  font-family: "Barlow", sans-serif;
-}
-@media screen and (min-width: 768px) {
-  .link {
-    width: 154px;
-    height: 29px;
-    font-size: 15px;
-  }
 }/*# sourceMappingURL=detailProject.css.map */

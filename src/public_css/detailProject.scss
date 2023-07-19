@@ -1,6 +1,6 @@
 @import '../../web/src/styles/core/variables.scss';
 .div{
-  background-image: url("../../web/src/images/foto2.jpg");
+  background-image: url("foto2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -32,11 +32,10 @@
   }
 .title1 {
   font-family: $ChakraPetch;
-  color:blue;
+  // color:blue;
   font-size: 20px;
   line-height: normal;
-  // color: $white;
-  
+  color: $white;
   @media screen and (min-width: 768px) {
    font-size: 50px;
    }
@@ -49,7 +48,7 @@
   flex-direction: column;
   @media screen and (min-width: 768px) {
     padding-top: 21px;
-  
+
   }
 }
 
@@ -61,7 +60,7 @@
     @media screen and (min-width: 768px) {
 
       }
-  
+
 }
 
 .preview .autor {
@@ -94,9 +93,6 @@
   width: 90%;
 }
 
-.main .subtitleCard {
-  // font-weight: 300;
-}
 
 .info-project .subtitleCard {
   text-align: center;
@@ -267,31 +263,13 @@ color: rgb(202, 202, 202);
 }
 
 .copy {
-  color:blue;
+  // color:blue;
+  color: $white;
   font-size: 14px;
   width: 210px;
   height: 20px;
 }
-.link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-decoration: none;
-  background-color: #8176af;
-  align-items: center;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  width: 90px;
-  height: 17px;
-  font-size: px;
-  font-family: 'Barlow', sans-serif;
-  @media screen and (min-width: 768px) {
-    width: 154px;
-    height: 29px;
-    font-size: 15px;
-  }
-}
+
 
 
 
