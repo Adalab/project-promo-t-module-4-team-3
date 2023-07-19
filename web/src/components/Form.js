@@ -17,7 +17,7 @@ function Form({
 
   return (
     <>
-    <h1>holi</h1>
+    <h2>holi</h2>
       <section className='form'>
         <div className='form_autor'>
           <section>
