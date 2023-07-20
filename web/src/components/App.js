@@ -9,12 +9,9 @@ import Form from './Form';
 import Footer from './Footer';
 import logo_nasa from '../images/logo-nasa.png';
 import lStorage from '../services/localstorage';
-<<<<<<< HEAD:web/src/components/App.js
 import Repository from './Repository';
 
-=======
 import Landing from '../components/Landing';
->>>>>>> landing:src/components/App.js
 
 function App() {
   const [data, setData] = useState(
@@ -75,6 +72,13 @@ function App() {
 
   return (
     <div className='container'>
+      <Routes>
+        <Route path='/' element={<></>} />
+        <Route
+          path='*'
+          element={<Header imgLogo={imgLogo} imgNasa={logo_nasa} />}
+        />
+      </Routes>
       <main className='main'>
         <Routes>
           <Route path='/' element={<Landing />} />
@@ -82,11 +86,10 @@ function App() {
             path='/preview'
             element={
               <>
-<<<<<<< HEAD:web/src/components/App.js
                 <h2 className='header__text2'>
                   Formulario de registro candidaturas
                 </h2>
-
+                {/*<Header imgLogo={imgLogo} imgNasa={logo_nasa} />*/}
                 <div className='form_container'>
                   <Preview data={data} />
                   <Form
@@ -97,19 +100,18 @@ function App() {
                     handleSubmit={handleSubmit}
                     url={url}
                   />
+                  {/*<Footer imgLogo={imgLogo} />*/}
                 </div>
               </>
             }
           />
           <Route
-            path='/Repositorio'
+            path='/projects'
             element={
               <>
-                <h2 className='header__text2'>
-                  Listado de proyectos
-                </h2>
+                <h2 className='header__text2'>Listado de proyectos</h2>
                 <Repository />
-=======
+                {/*
                 <Header imgLogo={imgLogo} imgNasa={logo_nasa} />
                 <Preview data={data} />
                 <Form
@@ -121,12 +123,13 @@ function App() {
                   url={url}
                 />
                 <Footer imgLogo={imgLogo} />
->>>>>>> landing:src/components/App.js
+            */}
               </>
             }
           />
         </Routes>
       </main>
+      <Footer imgLogo={imgLogo} />
     </div>
   );
 }
