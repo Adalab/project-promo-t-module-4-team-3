@@ -10,6 +10,8 @@ import Footer from './Footer';
 import logo_nasa from '../images/logo-nasa.png';
 import lStorage from '../services/localstorage';
 import Repository from './Repository';
+import Modal from './Modal';
+
 
 import Landing from '../components/Landing';
 
@@ -28,8 +30,10 @@ function App() {
       photo: '',
     })
   );
-
+  const[modal, setModal] = useState( false );
+  const Toggle = () => setModal(!modal);
   const [url, setUrl] = useState('');
+
 
   const handleChangeForm = (input, value) => {
     setData({ ...data, [input]: value });
@@ -40,7 +44,13 @@ function App() {
 
   const handleSubmit = (ev) => {
     // ev.preventDefault();
+    for (const field in data) {
+      if(data[field] === '') {
+       setUrl('No se pudo crear su card, por favor rellene todos los campos');
+        return 
+      }    
 
+    }
     callToApi(data).then((response) => {
       console.log(response);
       if (response.cardURL) {
@@ -49,6 +59,7 @@ function App() {
         setUrl('No se pudo crear su card, por favor rellene todos los campos');
       }
     });
+    setModal(!modal);
   };
   useEffect(() => {
     lStorage.set('lsData', data);
@@ -68,6 +79,7 @@ function App() {
       photo: '',
     });
     setUrl('');
+    
   };
 
   return (
@@ -100,7 +112,12 @@ function App() {
                     handleSubmit={handleSubmit}
                     url={url}
                   />
-                  {/*<Footer imgLogo={imgLogo} />*/}
+                  <Modal
+                    show={modal}
+                    url={url}
+                    title='My Modal'
+                    close={Toggle}
+                  />
                 </div>
               </>
             }
