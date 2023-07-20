@@ -25,10 +25,10 @@
     .desc {
       font-size: 13px;
     }
-    .name{
+    .name {
       font-size: 15px;
     }
-    .job{
+    .job {
       font-size: 14px;
     }
   }
@@ -55,6 +55,43 @@
       width: 154px;
       height: 29px;
       font-size: 15px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: start;
+    margin-bottom: 20px;
+
+    @media all and (min-width: 768px) {
+      flex-direction: row;
+      margin-bottom: 0;
+    }
+  }
+  &__labelFilter {
+    color: #777e9e;
+    font-size: 14px;
+    font-weight: bolder;
+    margin: 10px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+  &__inputFilter {
+    border-radius: 10px;
+    width: 30%;
+    padding: 4px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    background-color: #e3efe5;
+    @media screen and (min-width: 768px) {
+      width: 15%;
+      margin: 10px 10px;
+      font-size: 18px;
     }
   }
 }

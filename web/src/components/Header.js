@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 function Header({ imgLogo, imgNasa }) {
   return (
@@ -12,7 +12,7 @@ function Header({ imgLogo, imgNasa }) {
         <div className='header__container2'>
           <h1 className='header__title'>CosmoCoders</h1>
         </div>
-        <Link to='/Repositorio'>
+        <Link to='/projects'>
           {' '}
           <button className='header__button'>VER PROYECTOS</button>
         </Link>
