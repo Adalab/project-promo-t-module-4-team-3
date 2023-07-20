@@ -11,7 +11,6 @@ import logo_nasa from '../images/logo-nasa.png';
 import lStorage from '../services/localstorage';
 import Repository from './Repository';
 
-
 function App() {
   const [data, setData] = useState(
     lStorage.get('lsData', {
@@ -77,9 +76,7 @@ function App() {
             path='/'
             element={
               <>
-                <h2 className='header__text2'>
-                  Formulario de registro candidaturas
-                </h2>
+                <h2 className='header__text2'>Formulario de registro candidaturas</h2>
 
                 <div className='form_container'>
                   <Preview data={data} />
@@ -96,12 +93,10 @@ function App() {
             }
           />
           <Route
-            path='/Repositorio'
+            path='/projects'
             element={
               <>
-                <h2 className='header__text2'>
-                  Listado de proyectos
-                </h2>
+                <h2 className='header__text2'>Listado de proyectos</h2>
                 <Repository />
               </>
             }
