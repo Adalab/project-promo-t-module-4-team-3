@@ -1,0 +1,58 @@
+.repository__title {
+  color: white;
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+}
+.repository__preview {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+.repository__imagen .preview {
+  margin: 0;
+}
+.repository__imagen .slogan {
+  font-size: 12px;
+}
+.repository__imagen .title {
+  font-size: 14px;
+}
+.repository__imagen .desc {
+  font-size: 13px;
+}
+.repository__imagen .name {
+  font-size: 15px;
+}
+.repository__imagen .job {
+  font-size: 14px;
+}
+.repository__divLink {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.repository__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #8176af;
+  align-items: center;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  width: 90px;
+  height: 17px;
+  font-size: px;
+  font-family: "Barlow", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .repository__link {
+    width: 154px;
+    height: 29px;
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=respositorio.css.map */

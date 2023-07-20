@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 19px;
+}
+.footer__logo {
+  width: 115px;
+  height: 38px;
+}
+@media (min-width: 768px) {
+  .footer__logo {
+    height: 43px;
+  }
+}
+.footer__copy {
+  color: rgb(205, 197, 197);
+  font-size: 14px;
+  width: 210px;
+  height: 20px;
+}/*# sourceMappingURL=footer.css.map */

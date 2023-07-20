@@ -10,7 +10,8 @@ import Footer from './Footer';
 import logo_nasa from '../images/logo-nasa.png';
 import lStorage from '../services/localstorage';
 import Repository from './Repository';
-
+import Modal from './Modal';
+import Landing from '../components/Landing';
 
 function App() {
   const [data, setData] = useState(
@@ -27,8 +28,10 @@ function App() {
       photo: '',
     })
   );
-
+  const[modal, setModal] = useState( false );
+  const Toggle = () => setModal(!modal);
   const [url, setUrl] = useState('');
+
 
   const handleChangeForm = (input, value) => {
     setData({ ...data, [input]: value });
@@ -38,15 +41,23 @@ function App() {
   };
 
   const handleSubmit = (ev) => {
-    ev.preventDefault();
+    // ev.preventDefault();
+    for (const field in data) {
+      if(data[field] === '') {
+       setUrl('No se pudo crear su card, por favor rellene todos los campos');
+        return 
+      }    
 
+    }
     callToApi(data).then((response) => {
-      if (response.success) {
+      console.log(response);
+      if (response.cardURL) {
         setUrl(response.cardURL);
       } else {
         setUrl('No se pudo crear su card, por favor rellene todos los campos');
       }
     });
+    setModal(!modal);
   };
   useEffect(() => {
     lStorage.set('lsData', data);
@@ -66,20 +77,29 @@ function App() {
       photo: '',
     });
     setUrl('');
+    
   };
+
   return (
     <div className='container'>
-      <Header imgLogo={imgLogo} imgNasa={logo_nasa} />
+      <Routes>
+        <Route path='/' element={<></>} />
+        <Route
+          path='*'
+          element={<Header imgLogo={imgLogo} imgNasa={logo_nasa} />}
+        />
+      </Routes>
       <main className='main'>
         <Routes>
+          <Route path='/' element={<Landing />} />
           <Route
-            path='/'
+            path='/preview'
             element={
               <>
                 <h2 className='header__text2'>
                   Formulario de registro candidaturas
                 </h2>
-
+                {/*<Header imgLogo={imgLogo} imgNasa={logo_nasa} />*/}
                 <div className='form_container'>
                   <Preview data={data} />
                   <Form
@@ -90,18 +110,35 @@ function App() {
                     handleSubmit={handleSubmit}
                     url={url}
                   />
+                  <Modal
+                    show={modal}
+                    url={url}
+                    title='My Modal'
+                    close={Toggle}
+                  />
                 </div>
               </>
             }
           />
           <Route
-            path='/Repositorio'
+            path='/projects'
             element={
               <>
-                <h2 className='header__text2'>
-                  Listado de proyectos
-                </h2>
+                <h2 className='header__text2'>Listado de proyectos</h2>
                 <Repository />
+                {/*
+                <Header imgLogo={imgLogo} imgNasa={logo_nasa} />
+                <Preview data={data} />
+                <Form
+                  data={data}
+                  handleChangeForm={handleChangeForm}
+                  handleInputForm={handleInputForm}
+                  handleReset={handleInputReset}
+                  handleSubmit={handleSubmit}
+                  url={url}
+                />
+                <Footer imgLogo={imgLogo} />
+            */}
               </>
             }
           />
