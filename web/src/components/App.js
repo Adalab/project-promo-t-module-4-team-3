@@ -11,8 +11,6 @@ import logo_nasa from '../images/logo-nasa.png';
 import lStorage from '../services/localstorage';
 import Repository from './Repository';
 import Modal from './Modal';
-
-
 import Landing from '../components/Landing';
 
 function App() {
