@@ -48,6 +48,7 @@
 
   .textInfo,
   .textTeam {
+    
     color: white;
     background-color: rgba(138, 58, 170, 0.686);
     font-size: 11px;
@@ -56,6 +57,7 @@
     border-radius: 5px;
     opacity: 0;
     transition: opacity 0.3s ease;
+
     @media screen and (min-width: 768px) {
       font-size: 12px;
     }
@@ -73,6 +75,7 @@
 .textInfo {
   width: 220px;
   margin-left: 10px;
+  font-family: 'narrow', sans-serif;
   @media screen and (min-width: 768px) {
     width: 280px;
     left: 45%;
@@ -84,6 +87,7 @@
 .textTeam {
   width: 250px;
   margin-left: 15px;
+  font-family: 'narrow', sans-serif;
   @media screen and (min-width: 768px) {
     left: 57%;
   }
