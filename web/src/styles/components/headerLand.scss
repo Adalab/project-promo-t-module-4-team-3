@@ -1,15 +1,25 @@
 .headerLand {
+<<<<<<< HEAD:web/src/styles/components/headerLand.scss
   color: aqua;
+=======
+  /* Estilos para el contenedor del headerLand */
+>>>>>>> landing:src/styles/components/headerLand.scss
 }
+
 .divIcon {
+  /* Estilos para el contenedor de los iconos */
   display: flex;
   justify-content: flex-end;
   padding: 10px;
-  gap: 20px;
   @media screen and (min-width: 768px) {
-    //media query del main flex-direction
+    gap: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    /* media query del main flex-direction */
   }
 }
+
 .icon {
   width: 30px;
   height: 30px;
@@ -18,15 +28,111 @@
   border-radius: 10px;
   padding: 5px;
   cursor: pointer;
+
+  &:hover {
+    filter: saturate(180%);
+    transition: all 0.5s ease-in-out;
+  }
+  @media screen and (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 45px;
+    height: 45px;
+  }
 }
-.icon:hover {
-  filter: saturate(180%);
-  transition: all 0.5s ease-in-out;
-}
+
 .iconTeam {
   padding-right: 10px;
 }
+
 .divTextLand {
-  background-color: rgba(124, 121, 121, 0.323);
-  color: white;
+  position: relative;
+
+  .textInfo,
+  .textTeam {
+    color: white;
+    background-color: rgba(138, 58, 170, 0.686);
+    font-size: 11px;
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    @media screen and (min-width: 768px) {
+      font-size: 12px;
+    }
+    @media screen and (min-width: 1024px) {
+      font-size: 14px;
+    }
+  }
+
+  .textInfo.active,
+  .textTeam.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
+.textInfo {
+  width: 220px;
+  margin-left: 10px;
+  @media screen and (min-width: 768px) {
+    width: 280px;
+    left: 45%;
+  }
+  @media screen and (min-width: 1024px) {
+    left: 59%;
+  }
+}
+.textTeam {
+  width: 250px;
+  margin-left: 15px;
+  @media screen and (min-width: 768px) {
+    left: 57%;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 280px;
+    left: 65%;
+  }
+}
+/*
+
+import '../styles/components/headerLand.scss';
+import iconInfo from '../images/acerca-de.png';
+import iconTeam from '../images/grupo.png';
+function HeaderLand() {
+  return (
+    <>
+      <div className='headerLand'>
+        <div className='divIcon'>
+          <img className='iconInfo icon' src={iconInfo} alt='info' />
+          <img className='iconTeam icon' src={iconTeam} alt='team' />
+        </div>
+        <div className='divTextLand'>
+          <p className='textInfo'>
+            "En esta aplicación encontrarás una página donde se muestran
+            proyectos alucinantes sobre diferentes temas. Si deseas dejar huella
+            puedes subir tu propio proyecto clicando en (nombre del boton) que
+            te dará paso a un formulario donde podrás rellenar tus datos y
+            embarcarte en este viaje de distribución del saber"
+          </p>
+          <p className='textTeam'>
+            "Somos un grupo de 5 mujeres programadoras fullstack dedicadas al
+            desarrollo web.Creamos entornos de comunicacion para futuros
+            programadores a través de nuestra plataforma donde comparten sus
+            proyectos y se dan a conocer. Somos una ventana abierta a la
+            tecnologia , el conocimiento y el futuro. Nuestra mision es apoyar
+            el creciminto y potencial de cada desarrolldaor para que pueda
+            compartir su legado con el mundo."
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}
+export default HeaderLand;
+
+
+
+*/
