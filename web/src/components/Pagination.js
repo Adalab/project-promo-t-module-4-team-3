@@ -1,24 +1,24 @@
-function Pagination({ handlePages, actualPage, pages }) {
-  const handlePaginationButton = (ev) => {
-    return handlePages(ev.target.value);
-  };
+function Pagination({ handleNext, handlePrevious,infoPages}) {
+
   return (
     <form className='form__Pagination'>
-      <input
-        className={actualPage <= 1 ? 'input__Previous disabled' : 'input__Previous'}
-        type='button'
-        value='prev'
-        onClick={handlePaginationButton}
-      />
+      <button
+        className={
+          !infoPages.prev ? 'input__Previous disabled' : 'input__Previous'
+        }
+        onClick={handlePrevious}
+      >
+        Previous
+      </button>
       <span>
-        Pagina {actualPage} de {pages}
+        Página {infoPages.page + 1} de {infoPages.numPages}
       </span>
-      <input
-        className={actualPage >= pages ? 'input__Next disabled' : 'input__Next'}
-        type='button'
-        value='next'
-        onClick={handlePaginationButton}
-      />
+      <button
+        className={!infoPages.next ? 'input__Next disabled' : 'input__Next'}
+        onClick={handleNext}
+      >
+        Next
+      </button>
     </form>
   );
 }
