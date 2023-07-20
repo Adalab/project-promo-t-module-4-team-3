@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 import Close from '../images/times-solid-svgrepo-com.svg';
 
- const Modal = ({ show, close,url }) => {
+ const Modal = ({ show, close, url }) => {
    return (
      <>
        {show ? (
@@ -18,13 +19,15 @@ import Close from '../images/times-solid-svgrepo-com.svg';
                  : 'No se pudo crear su card, por favor rellene todos los campos'}
                <div className='buttons_container'>
                  <button className='card_button'>
-                   <a className='card_button_url' href={url}>
+                   <a className='card_button_url' href={url} target='_blank' onClick={() => close()}>
                      Ver tarjeta creada
                    </a>
                  </button>
-                 <button className='project_button'>
-                   Ver listado de proyectos
-                 </button>
+                 <Link to='/projects'>
+                   <button className='project_button '  onClick={() => close()}>
+                     Ver listado de proyectos
+                   </button>
+                 </Link>
                </div>
              </main>
              {/* <footer className='modal_footer'>

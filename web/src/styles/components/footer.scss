@@ -14,10 +14,11 @@
     }}
 
  &__copy {
-  color: rgb(205, 197, 197);
+  color: rgb(203, 197, 205);
   font-size: 14px;
   width: 210px;
   height: 20px;
+  font-family: $barlow;
 }
   
   @media (min-width: 768px) {

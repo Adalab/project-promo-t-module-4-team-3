@@ -10,7 +10,7 @@ function Pagination({ handleNext, handlePrevious,infoPages}) {
       >
         Previous
       </button>
-      <span>
+      <span className = 'pagination__text'>
         Página {infoPages.page + 1} de {infoPages.numPages}
       </span>
       <button

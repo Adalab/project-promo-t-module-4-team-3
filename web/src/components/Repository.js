@@ -13,7 +13,7 @@ function Repository() {
   const [searchA, setSearchA] = useState('');
   const [searchP, setSearchP] = useState('');
   const [infoPages, setInfoPages] =useState({
-    // page:1 ,
+    // page: ,
     // numPages: ,
     // next:
     // prev:
@@ -51,19 +51,7 @@ function Repository() {
     });
   }
 
-  //const renderCard = () => {
-  /* return dataList
-      .filter((obj) => {
-        return obj.autor
-          .toLocaleLowerCase()
-          .includes(searchA.toLocaleLowerCase());
-      })
-      .filter((obj) => {
-        return obj.name
-          .toLocaleLowerCase()
-          .includes(searchP.toLocaleLowerCase());
-      })*/
-  //   <ul className='landing-ul'>{renderCard()}</ul>
+ 
 
   useEffect(() => {
     getfiltered(searchA, searchP).then((response) => {
@@ -76,13 +64,6 @@ function Repository() {
 
   return (
     <>
-      <section>
-        <Pagination
-          handleNext={handleNext}
-          handlePrevious={handlePrevious}
-          infoPages={infoPages}
-        />
-      </section>
       <div className='repository'>
         <form className='repository__form'>
           <label className='repository__labelFilter'>
@@ -105,7 +86,13 @@ function Repository() {
             Buscar
           </button>
         </form>
-
+        <section className='section_pagination'>
+          <Pagination
+            handleNext={handleNext}
+            handlePrevious={handlePrevious}
+            infoPages={infoPages}
+          />
+        </section>
         <div className='repository__preview'>
           {listProjects.map((project) => {
             return (
