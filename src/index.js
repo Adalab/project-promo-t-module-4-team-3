@@ -73,6 +73,14 @@ server.get("/project/:idProject", async (req, res) => {
     res.render("detailProject", results[0]);
 })
 
+
+server.get('/api/filter', async(req,res)=>{
+    
+});
+
+
+
+
 server.use(express.static("./src/public"));
 const pathServerPublicStyles = './src/public_css';
 server.use(express.static(pathServerPublicStyles));
