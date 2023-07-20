@@ -12,7 +12,7 @@ server.set("view engine", "ejs")
 
 const serverPort = 4000;
 server.listen(serverPort, () =>{
-    console.log(`server listening at http://localhost:${serverPort}`);
+    console.log(`server listening at ${serverPort}`);
 });
 //  Conexion a la bade de datos
 
