@@ -17,7 +17,6 @@ function Form({
 
   return (
     <>
-    <h2>holi</h2>
       <section className='form'>
         <div className='form_autor'>
           <section>
@@ -141,22 +140,9 @@ function Form({
           <span className={url === '' ? 'hidden' : ''}>
             {url !==
             'No se pudo crear su card, por favor rellene todos los campos'
-              ? 'La tarjeta ha sido creada: '
+              ? ''
               : 'No se pudo crear su card, por favor rellene todos los campos'}
-          </span>
-          <a
-            href={url}
-            className={
-              url ===
-              'No se pudo crear su card, por favor rellene todos los campos'
-                ? 'hidden'
-                : 'card__url'
-            }
-            target='_blank'
-            rel='noreferrer'
-          >
-            <p>{url}</p>
-          </a>
+          </span>         
         </section>
       </section>
     </>

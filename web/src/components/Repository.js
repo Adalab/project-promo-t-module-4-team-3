@@ -1,19 +1,24 @@
 import { Link } from 'react-router-dom';
-import getAllListOfProjects from '../services/api_allprojects';
+
 
 import Preview from './Preview';
 import '../styles/components/repository.scss';
 import { useEffect, useState } from 'react';
 import Pagination from './Pagination';
+import getfiltered from '../services/api_filter';
+import getpage from '../services/api_pagination';
 
 function Repository() {
   const [listProjects, setListProjects] = useState([]);
   const [searchA, setSearchA] = useState('');
   const [searchP, setSearchP] = useState('');
-  const [actualPage, setactualPage] = useState(1);
-  const [actualInfo, setActualInfo] = useState({});
-  const [actualURL, setactualURL] = useState();
-
+  const [infoPages, setInfoPages] =useState({
+    // page: ,
+    // numPages: ,
+    // next:
+    // prev:
+  })
+  console.log(infoPages)
   const handleInputA = (ev) => {
     ev.preventDefault();
     setSearchA(ev.target.value);
@@ -22,48 +27,48 @@ function Repository() {
   const handleInputP = (ev) => {
     setSearchP(ev.target.value);
   };
-  const handlePages = (varValue) => {
-    if (varValue === 'null') {
-      return actualURL;
-    } else if (varValue === 'next') {
-      setactualURL(actualInfo.next);
-      return setactualPage(actualPage + 1);
-    } else if (varValue === 'prev') {
-      setactualURL(actualInfo.prev);
-      return setactualPage(actualPage - 1);
-    }
+
+  const handleSubmit = () => {
+    getfiltered(searchA, searchP).then((response) => {
+      const dataList = response.projects;
+      setListProjects(dataList);
+      setInfoPages(response.info)
+    });
   };
 
-  //const renderCard = () => {
-  /* return dataList
-      .filter((obj) => {
-        return obj.autor
-          .toLocaleLowerCase()
-          .includes(searchA.toLocaleLowerCase());
-      })
-      .filter((obj) => {
-        return obj.name
-          .toLocaleLowerCase()
-          .includes(searchP.toLocaleLowerCase());
-      })*/
-  //   <ul className='landing-ul'>{renderCard()}</ul>
+  const handleNext = () => {
+     getpage(infoPages.next).then((response) => {
+      const dataList = response.projects;
+      setListProjects(dataList);
+      setInfoPages(response.info);
+    });
+  };
+  const handlePrevious=()=>{
+    getpage(infoPages.prev).then((response) => {
+      const dataList = response.projects;
+      setListProjects(dataList);
+      setInfoPages(response.info);
+    });
+  }
+
+ 
 
   useEffect(() => {
-    getAllListOfProjects().then((response) => {
-      const dataList = response;
+    getfiltered(searchA, searchP).then((response) => {
+      const dataList = response.projects;
       setListProjects(dataList);
-      return dataList;
+      setInfoPages(response.info);
+      
     });
   }, []);
 
   return (
     <>
-      <section>
-        <Pagination handlePages={handlePages} actualPage={actualPage} pages={actualInfo.pages} />
-      </section>
       <div className='repository'>
         <form className='repository__form'>
-          <label className='repository__labelFilter'>Filtrar por Proyecto</label>
+          <label className='repository__labelFilter'>
+            Filtrar por Proyecto
+          </label>
           <input
             type='text'
             className='repository__inputFilter'
@@ -77,8 +82,17 @@ function Repository() {
             onChange={handleInputA}
             value={searchA}
           ></input>
+          <button className='button' onClick={handleSubmit}>
+            Buscar
+          </button>
         </form>
-
+        <section className='section_pagination'>
+          <Pagination
+            handleNext={handleNext}
+            handlePrevious={handlePrevious}
+            infoPages={infoPages}
+          />
+        </section>
         <div className='repository__preview'>
           {listProjects.map((project) => {
             return (
