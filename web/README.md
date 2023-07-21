@@ -1,4 +1,4 @@
-<<<<<<< HEAD:web/README.md
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -69,7 +69,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
+
 Project Module 4- Backend 🚧
 Team Coll Project CosmoCoders
 
@@ -100,4 +100,4 @@ Iván Garrido @igarrido-adalab
 Yanelis Serrano @ytaylordev
 
 © Adalab 2023 | Trótula Promotion
->>>>>>> 80a4c03c7f4336a02af5e9239f13c35c1bb46918:README.md
+

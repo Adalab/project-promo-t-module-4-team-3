@@ -1,0 +1,124 @@
+.repository {
+  &__title {
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+  }
+  &__preview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+  }
+  &__imagen {
+    .preview {
+      margin: 0;
+    }
+    .slogan {
+      font-size: 12px;
+    }
+    .title {
+      font-size: 14px;
+    }
+    .desc {
+      font-size: 13px;
+    }
+    .name {
+      font-size: 15px;
+    }
+    .job {
+      font-size: 14px;
+    }
+  }
+  &__divLink {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #8176af;
+    align-items: center;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    width: 90px;
+    height: 17px;
+    font-size: px;
+    font-family: 'Barlow', sans-serif;
+    @media screen and (min-width: 768px) {
+      width: 154px;
+      height: 29px;
+      font-size: 15px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: start;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-family: 'Barlow', sans-serif;
+
+    @media all and (min-width: 768px) {
+      flex-direction: row;
+      margin-bottom: 0;
+    }
+  }
+  &__labelFilter {
+    color: #777e9e;
+    font-size: 14px;
+    font-weight: bolder;
+    margin: 10px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+  &__inputFilter {
+    border-radius: 10px;
+    width: 30%;
+    padding: 4px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    background-color: #e3efe5;
+    @media screen and (min-width: 768px) {
+      width: 15%;
+      margin: 10px 10px;
+      font-size: 18px;
+    }
+  }
+}
+.button {
+  border-radius: 10px;
+  width: 80px;
+  padding: 5px;
+  margin-top: 5px;
+  font-family: 'Barlow', sans-serif;
+  color: antiquewhite;
+  background-color: #8176af;
+  box-shadow: 0 0 1rem 0 rgba(51, 45, 81, 0.776);
+  &:hover {
+    background: linear-gradient(180deg, #708bd76a, #7b2d1199);
+    color: rgba(190, 205, 234, 0.876);
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    margin-top: 0px;
+  }
+}
+.section_pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:30px 0px;
+}
