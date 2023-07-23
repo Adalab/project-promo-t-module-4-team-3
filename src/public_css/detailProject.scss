@@ -1,8 +1,15 @@
 @import '../../web/src/styles/core/variables.scss';
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
 .div{
   background-image: url("foto2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 .header {
     display: flex;
@@ -252,6 +259,10 @@ color: rgb(202, 202, 202);
   display: flex;
   justify-content: space-around;
   padding-bottom: 19px;
+  margin-top: 140px;
+  @media (min-width: 768px) {
+   margin-top: 70px;
+   }
 
 }
 .logo {
@@ -264,10 +275,11 @@ color: rgb(202, 202, 202);
 
 .copy {
   // color:blue;
-  color: $white;
+  color: rgb(203, 197, 205);
   font-size: 14px;
   width: 210px;
   height: 20px;
+  font-family: $barlow;
 }
 
 
