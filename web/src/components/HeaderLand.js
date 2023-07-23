@@ -38,7 +38,7 @@ function HeaderLand() {
           <p className={`textInfo ${showInfo ? 'active' : ''}`}>
             "En esta aplicación encontrarás una página donde se muestran
             proyectos alucinantes sobre diferentes temas. Si deseas dejar huella
-            puedes subir tu propio proyecto clicando en (nombre del boton) que
+            puedes subir tu propio proyecto clicando en "Comenzar" que
             te dará paso a un formulario donde podrás rellenar tus datos y
             embarcarte en este viaje de distribución del saber"
           </p>
@@ -47,8 +47,8 @@ function HeaderLand() {
             desarrollo web.Creamos entornos de comunicacion para futuros
             programadores a través de nuestra plataforma donde comparten sus
             proyectos y se dan a conocer. Somos una ventana abierta a la
-            tecnologia , el conocimiento y el futuro. Nuestra mision es apoyar
-            el creciminto y potencial de cada desarrolldaor para que pueda
+            tecnologia , el conocimiento y el futuro. Nuestra misión es apoyar
+            el crecimiento y potencial de cada desarrollador para que pueda
             compartir su legado con el mundo."
           </p>
         </div>
