@@ -1,7 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .div {
   background-image: url("foto2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .header {
@@ -253,8 +260,9 @@
 }
 
 .copy {
-  color: #fff;
+  color: rgb(203, 197, 205);
   font-size: 14px;
   width: 210px;
   height: 20px;
+  font-family: "Barlow", sans-serif;
 }/*# sourceMappingURL=detailProject.css.map */

@@ -1,0 +1,17 @@
+.disabled {
+  display: none;
+}
+
+.input__Previous,
+.input__Next {
+  border-radius: 10px;
+  width: 100px;
+  background-color: #939dcb;
+  color: antiquewhite;
+}
+.pagination__text {
+  font-family: "Barlow", sans-serif;
+  color: antiquewhite;
+  margin: 0 10px;
+  font-size: 12px;
+}/*# sourceMappingURL=pagination.css.map */
