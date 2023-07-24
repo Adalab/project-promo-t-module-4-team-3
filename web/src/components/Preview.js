@@ -20,7 +20,7 @@ function Preview({ data }) {
            
 
             <p className='desc'>
-              {data.desc ||
+              {data.description ||
                 'La aplicación traza una ruta completa desde el sitio de aterrizaje hasta el sitio de destino que no supera los 15 grados de pendiente y tiene algún tipo de optimización, por ejemplo, la distancia más corta o la menor cantidad de subida de colinas.'}
             </p>
             <section className='technologies'>
