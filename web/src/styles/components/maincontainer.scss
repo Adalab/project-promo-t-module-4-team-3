@@ -1,10 +1,10 @@
 .container {
   // background-color: #302c42;
-  background-image: url("../../images/foto2.jpg");
+  background-image: url('../../images/foto2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   //background: linear-gradient(180deg, #492694, #03010c);
-
+  min-height: 600px;
 }
 .main {
   display: flex;
@@ -17,13 +17,13 @@
   }
 }
 .form_container {
-  display:flex;
+  display: flex;
   flex-direction: column;
   //background-color: #392538;
   //margin:0 250px;
   @media screen and (min-width: 768px) {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-    }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }

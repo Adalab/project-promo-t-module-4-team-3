@@ -3,26 +3,25 @@
   justify-content: space-around;
   align-items: center;
   padding-bottom: 19px;
+  margin-top: 150px;
 
-  
   &__logo {
-  width: 115px;
-  height: 38px;
+    width: 115px;
+    height: 38px;
 
     @media (min-width: 768px) {
-    height: 43px;
-    }}
-
- &__copy {
-  color: rgb(203, 197, 205);
-  font-size: 14px;
-  width: 210px;
-  height: 20px;
-  font-family: $barlow;
-}
-  
-  @media (min-width: 768px) {
-   
+      height: 43px;
+    }
   }
-  
+
+  &__copy {
+    color: rgb(203, 197, 205);
+    font-size: 14px;
+    width: 210px;
+    height: 20px;
+    font-family: $barlow;
+  }
+
+  @media (min-width: 768px) {
+  }
 }

@@ -3,6 +3,7 @@
   font-family: "Barlow", sans-serif;
   font-size: 20px;
 }
+
 .repository__preview {
   display: flex;
   flex-direction: row;
@@ -11,29 +12,37 @@
   justify-content: center;
   padding: 2rem;
 }
+
 .repository__imagen .preview {
   margin: 0;
 }
+
 .repository__imagen .slogan {
   font-size: 12px;
 }
+
 .repository__imagen .title {
   font-size: 14px;
 }
+
 .repository__imagen .desc {
   font-size: 13px;
 }
+
 .repository__imagen .name {
   font-size: 15px;
 }
+
 .repository__imagen .job {
   font-size: 14px;
 }
+
 .repository__divLink {
   display: flex;
   justify-content: center;
   margin-bottom: 25px;
 }
+
 .repository__link {
   display: flex;
   flex-direction: column;
@@ -49,6 +58,7 @@
   font-size: px;
   font-family: "Barlow", sans-serif;
 }
+
 @media screen and (min-width: 768px) {
   .repository__link {
     width: 154px;
@@ -56,6 +66,7 @@
     font-size: 15px;
   }
 }
+
 .repository__form {
   display: flex;
   flex-direction: column;
@@ -67,23 +78,27 @@
   margin-top: 20px;
   font-family: "Barlow", sans-serif;
 }
+
 @media all and (min-width: 768px) {
   .repository__form {
     flex-direction: row;
     margin-bottom: 0;
   }
 }
+
 .repository__labelFilter {
   color: #777e9e;
   font-size: 14px;
   font-weight: bolder;
   margin: 10px;
 }
+
 @media screen and (min-width: 768px) {
   .repository__labelFilter {
     font-size: 18px;
   }
 }
+
 .repository__inputFilter {
   border-radius: 10px;
   width: 30%;
@@ -92,6 +107,7 @@
   font-size: 14px;
   background-color: #e3efe5;
 }
+
 @media screen and (min-width: 768px) {
   .repository__inputFilter {
     width: 15%;
@@ -110,10 +126,12 @@
   background-color: #8176af;
   box-shadow: 0 0 1rem 0 rgba(51, 45, 81, 0.776);
 }
+
 .button:hover {
   background: linear-gradient(180deg, rgba(112, 139, 215, 0.4156862745), rgba(123, 45, 17, 0.6));
   color: rgba(190, 205, 234, 0.876);
 }
+
 @media screen and (min-width: 768px) {
   .button {
     font-size: 18px;
@@ -126,4 +144,6 @@
   align-items: center;
   justify-content: center;
   margin: 30px 0px;
-}/*# sourceMappingURL=repository.css.map */
+}
+
+/*# sourceMappingURL=repository.css.map */
