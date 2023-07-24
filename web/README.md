@@ -44,7 +44,7 @@ Para generar tu página para producción ejecuta el comando:
 npm run build
 ```
 Esto genera una carpeta que hay que renombar a public.
-Una vez tienes esto abres la pagina de render y (una vez registrado) conectas tu proyecto y lo desplegas. Ahi te generará tu url para poder ver tu proyecto
+Una vez tienes esto abres la pagina de render y (una vez registrado) conectas tu proyecto y lo desplegas. Ahi te generará tu url para poder ver tu proyecto.
 
 ## Construido con
 >Html
